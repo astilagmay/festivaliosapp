@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A7502D123A69A4D0081A276 /* UpcomingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7502D023A69A4D0081A276 /* UpcomingCollectionViewCell.swift */; };
+		0A7502D323A69A600081A276 /* TodayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7502D223A69A600081A276 /* TodayCollectionViewCell.swift */; };
+		0A9599B923A6ADDF00997E9F /* TodayCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9599B823A6ADDF00997E9F /* TodayCollectionView.swift */; };
+		0A9C7CC523A681BE007FE279 /* ZingRustDemo-Base.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A9C7CBC23A6817C007FE279 /* ZingRustDemo-Base.otf */; };
+		0A9C7CDA23A68276007FE279 /* SF UI Display Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A9C7CD223A68276007FE279 /* SF UI Display Bold.otf */; };
+		0A9C7CDB23A68276007FE279 /* SF UI Display Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A9C7CD323A68276007FE279 /* SF UI Display Black.otf */; };
+		0A9C7CDC23A68276007FE279 /* SF UI Display Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A9C7CD423A68276007FE279 /* SF UI Display Heavy.otf */; };
+		0A9C7CDD23A68276007FE279 /* SF UI Display Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A9C7CD523A68276007FE279 /* SF UI Display Light.otf */; };
+		0A9C7CDE23A68276007FE279 /* SF UI Display Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A9C7CD623A68276007FE279 /* SF UI Display Ultralight.otf */; };
+		0A9C7CDF23A68276007FE279 /* SF UI Display Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A9C7CD723A68276007FE279 /* SF UI Display Medium.otf */; };
+		0A9C7CE023A68276007FE279 /* SF UI Display Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A9C7CD823A68276007FE279 /* SF UI Display Thin.otf */; };
+		0A9C7CE123A68276007FE279 /* SF UI Display Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A9C7CD923A68276007FE279 /* SF UI Display Semibold.otf */; };
 		0AA4B22A2377E3D4007ADB92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4B2292377E3D4007ADB92 /* AppDelegate.swift */; };
 		0AA4B22C2377E3D4007ADB92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4B22B2377E3D4007ADB92 /* ViewController.swift */; };
 		0AA4B22F2377E3D4007ADB92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA4B22D2377E3D4007ADB92 /* Main.storyboard */; };
@@ -34,6 +46,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A7502D023A69A4D0081A276 /* UpcomingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingCollectionViewCell.swift; sourceTree = "<group>"; };
+		0A7502D223A69A600081A276 /* TodayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionViewCell.swift; sourceTree = "<group>"; };
+		0A9599B823A6ADDF00997E9F /* TodayCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionView.swift; sourceTree = "<group>"; };
+		0A9C7CBC23A6817C007FE279 /* ZingRustDemo-Base.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ZingRustDemo-Base.otf"; sourceTree = "<group>"; };
+		0A9C7CD223A68276007FE279 /* SF UI Display Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF UI Display Bold.otf"; path = "../../../../Downloads/sf-ui-display-cufonfonts/SF UI Display Bold.otf"; sourceTree = "<group>"; };
+		0A9C7CD323A68276007FE279 /* SF UI Display Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF UI Display Black.otf"; path = "../../../../Downloads/sf-ui-display-cufonfonts/SF UI Display Black.otf"; sourceTree = "<group>"; };
+		0A9C7CD423A68276007FE279 /* SF UI Display Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF UI Display Heavy.otf"; path = "../../../../Downloads/sf-ui-display-cufonfonts/SF UI Display Heavy.otf"; sourceTree = "<group>"; };
+		0A9C7CD523A68276007FE279 /* SF UI Display Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF UI Display Light.otf"; path = "../../../../Downloads/sf-ui-display-cufonfonts/SF UI Display Light.otf"; sourceTree = "<group>"; };
+		0A9C7CD623A68276007FE279 /* SF UI Display Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF UI Display Ultralight.otf"; path = "../../../../Downloads/sf-ui-display-cufonfonts/SF UI Display Ultralight.otf"; sourceTree = "<group>"; };
+		0A9C7CD723A68276007FE279 /* SF UI Display Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF UI Display Medium.otf"; path = "../../../../Downloads/sf-ui-display-cufonfonts/SF UI Display Medium.otf"; sourceTree = "<group>"; };
+		0A9C7CD823A68276007FE279 /* SF UI Display Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF UI Display Thin.otf"; path = "../../../../Downloads/sf-ui-display-cufonfonts/SF UI Display Thin.otf"; sourceTree = "<group>"; };
+		0A9C7CD923A68276007FE279 /* SF UI Display Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF UI Display Semibold.otf"; path = "../../../../Downloads/sf-ui-display-cufonfonts/SF UI Display Semibold.otf"; sourceTree = "<group>"; };
 		0AA4B2262377E3D4007ADB92 /* Festival.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Festival.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AA4B2292377E3D4007ADB92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AA4B22B2377E3D4007ADB92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +98,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A9C7CB523A6816D007FE279 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0A9C7CBC23A6817C007FE279 /* ZingRustDemo-Base.otf */,
+				0A9C7CD323A68276007FE279 /* SF UI Display Black.otf */,
+				0A9C7CD223A68276007FE279 /* SF UI Display Bold.otf */,
+				0A9C7CD423A68276007FE279 /* SF UI Display Heavy.otf */,
+				0A9C7CD523A68276007FE279 /* SF UI Display Light.otf */,
+				0A9C7CD723A68276007FE279 /* SF UI Display Medium.otf */,
+				0A9C7CD923A68276007FE279 /* SF UI Display Semibold.otf */,
+				0A9C7CD823A68276007FE279 /* SF UI Display Thin.otf */,
+				0A9C7CD623A68276007FE279 /* SF UI Display Ultralight.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		0AA4B21D2377E3D4007ADB92 = {
 			isa = PBXGroup;
 			children = (
@@ -97,9 +137,13 @@
 		0AA4B2282377E3D4007ADB92 /* Festival */ = {
 			isa = PBXGroup;
 			children = (
+				0A9C7CB523A6816D007FE279 /* Fonts */,
 				0AA4B2292377E3D4007ADB92 /* AppDelegate.swift */,
+				0A9599B823A6ADDF00997E9F /* TodayCollectionView.swift */,
 				0AA4B22B2377E3D4007ADB92 /* ViewController.swift */,
 				0AA4B22D2377E3D4007ADB92 /* Main.storyboard */,
+				0A7502D023A69A4D0081A276 /* UpcomingCollectionViewCell.swift */,
+				0A7502D223A69A600081A276 /* TodayCollectionViewCell.swift */,
 				0AA4B2302377E3D8007ADB92 /* Assets.xcassets */,
 				0AA4B2322377E3D8007ADB92 /* LaunchScreen.storyboard */,
 				0AA4B2352377E3D8007ADB92 /* Info.plist */,
@@ -230,7 +274,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AA4B2342377E3D8007ADB92 /* LaunchScreen.storyboard in Resources */,
+				0A9C7CDA23A68276007FE279 /* SF UI Display Bold.otf in Resources */,
+				0A9C7CDB23A68276007FE279 /* SF UI Display Black.otf in Resources */,
+				0A9C7CDD23A68276007FE279 /* SF UI Display Light.otf in Resources */,
+				0A9C7CDC23A68276007FE279 /* SF UI Display Heavy.otf in Resources */,
+				0A9C7CE023A68276007FE279 /* SF UI Display Thin.otf in Resources */,
+				0A9C7CDF23A68276007FE279 /* SF UI Display Medium.otf in Resources */,
+				0A9C7CDE23A68276007FE279 /* SF UI Display Ultralight.otf in Resources */,
 				0AA4B2312377E3D8007ADB92 /* Assets.xcassets in Resources */,
+				0A9C7CE123A68276007FE279 /* SF UI Display Semibold.otf in Resources */,
+				0A9C7CC523A681BE007FE279 /* ZingRustDemo-Base.otf in Resources */,
 				0AA4B22F2377E3D4007ADB92 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,8 +309,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A7502D323A69A600081A276 /* TodayCollectionViewCell.swift in Sources */,
+				0A7502D123A69A4D0081A276 /* UpcomingCollectionViewCell.swift in Sources */,
 				0AA4B22C2377E3D4007ADB92 /* ViewController.swift in Sources */,
 				0AA4B22A2377E3D4007ADB92 /* AppDelegate.swift in Sources */,
+				0A9599B923A6ADDF00997E9F /* TodayCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

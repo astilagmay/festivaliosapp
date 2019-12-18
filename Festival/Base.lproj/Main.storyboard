@@ -1,24 +1,404 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yHi-CU-epW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF UI Display Bold.otf">
+            <string>SFUIDisplay-Bold</string>
+        </array>
+        <array key="SF UI Display Medium.otf">
+            <string>SFUIDisplay-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Festival App-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewControllerA" id="BYZ-38-t0r" customClass="ViewController" customModule="Festival" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eHb-TE-TO1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="1436"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LeK-fT-ab1">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1436"/>
+                                        <subviews>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xHI-KA-OeE" customClass="TodayCollectionView" customModule="Festival" customModuleProvider="target">
+                                                <rect key="frame" x="12" y="418" width="350" height="969"/>
+                                                <color key="backgroundColor" red="0.96070033311843872" green="0.96083813905715942" blue="0.96067017316818237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="saY-vu-f4Q">
+                                                    <size key="itemSize" width="350" height="100"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TodayCollectionViewCell" id="xpb-dt-OYP" customClass="TodayCollectionViewCell" customModule="Festival" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="100"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="350" height="100"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9sh-2W-rAV">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="137" height="100"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NzK-fF-2hk">
+                                                                    <rect key="frame" x="150" y="10" width="73" height="16"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="13"/>
+                                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="riD-ep-Okt">
+                                                                    <rect key="frame" x="150" y="25" width="53" height="10"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="8"/>
+                                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdL-8j-BIF">
+                                                                    <rect key="frame" x="290" y="14" width="48" height="10"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="8"/>
+                                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0a-iu-PgO">
+                                                                    <rect key="frame" x="290" y="23" width="48" height="10"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="8"/>
+                                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n0C-PX-r46">
+                                                                    <rect key="frame" x="75" y="75" width="50" height="15"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PRICE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4G-YF-WAf">
+                                                                            <rect key="frame" x="11" y="1" width="29" height="12"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="10"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" red="0.34415090079999999" green="0.79774969819999997" blue="0.98518580200000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                            <integer key="value" value="5"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOM-bY-naa">
+                                                                    <rect key="frame" x="150" y="40" width="180" height="50"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="8"/>
+                                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaW-bs-fpD">
+                                                                    <rect key="frame" x="327" y="73" width="17" height="22"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" title="Button" image="AddEvent"/>
+                                                                </button>
+                                                            </subviews>
+                                                        </view>
+                                                        <color key="backgroundColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <connections>
+                                                            <outlet property="EventDate" destination="TdL-8j-BIF" id="4zw-77-BVM"/>
+                                                            <outlet property="EventDescription" destination="TOM-bY-naa" id="0Ms-gN-fjn"/>
+                                                            <outlet property="EventImage" destination="9sh-2W-rAV" id="ysA-bs-IT4"/>
+                                                            <outlet property="EventLocation" destination="riD-ep-Okt" id="kTm-46-tvq"/>
+                                                            <outlet property="EventName" destination="NzK-fF-2hk" id="llK-2m-w9m"/>
+                                                            <outlet property="EventPrice" destination="D4G-YF-WAf" id="e7U-5A-oyh"/>
+                                                            <outlet property="EventTime" destination="c0a-iu-PgO" id="Yn8-pK-lLU"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="hSp-Xb-e3M"/>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="GRt-gW-fFh"/>
+                                                </connections>
+                                            </collectionView>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Jew-p7-ZWm">
+                                                <rect key="frame" x="12" y="183" width="350" height="195"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.96070033311843872" green="0.96083813905715942" blue="0.96067017316818237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1Rt-wK-ZT4">
+                                                    <size key="itemSize" width="125" height="195"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UpcomingCollectionViewCell" id="g1c-MJ-H6C" customClass="UpcomingCollectionViewCell" customModule="Festival" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="195"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="125" height="195"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wXg-p0-3So">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="126" height="126"/>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgr-Wo-dfa">
+                                                                    <rect key="frame" x="10" y="131" width="73" height="16"/>
+                                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="13"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAx-41-I1D">
+                                                                    <rect key="frame" x="10" y="146" width="53" height="10"/>
+                                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="8"/>
+                                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6N-1M-DAj">
+                                                                    <rect key="frame" x="10" y="165" width="17" height="10"/>
+                                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="8"/>
+                                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6w-ok-tpN">
+                                                                    <rect key="frame" x="10" y="175" width="18" height="10"/>
+                                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="8"/>
+                                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PvG-Jb-FHd">
+                                                                    <rect key="frame" x="7" y="104" width="50" height="15"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PRICE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tby-eX-9SE">
+                                                                            <rect key="frame" x="11" y="1" width="29" height="12"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="10"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" red="0.34415090079999999" green="0.79774969819999997" blue="0.98518580200000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="50" id="Che-D9-CUG"/>
+                                                                        <constraint firstAttribute="height" constant="15" id="dGB-nS-KCF"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                            <integer key="value" value="5"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                            </subviews>
+                                                        </view>
+                                                        <color key="backgroundColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstItem="r6w-ok-tpN" firstAttribute="top" secondItem="B6N-1M-DAj" secondAttribute="bottom" id="2rv-ag-Uje"/>
+                                                            <constraint firstItem="wXg-p0-3So" firstAttribute="leading" secondItem="g1c-MJ-H6C" secondAttribute="leading" id="4SQ-Zy-kOe"/>
+                                                            <constraint firstItem="PvG-Jb-FHd" firstAttribute="leading" secondItem="g1c-MJ-H6C" secondAttribute="leading" constant="7" id="8Md-ez-Zao"/>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="bAx-41-I1D" secondAttribute="trailing" constant="54" id="ALl-Wv-YLa"/>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="B6N-1M-DAj" secondAttribute="trailing" constant="90" id="B3y-Wn-VTE"/>
+                                                            <constraint firstItem="bAx-41-I1D" firstAttribute="leading" secondItem="g1c-MJ-H6C" secondAttribute="leadingMargin" constant="2" id="CgM-Ii-gyt"/>
+                                                            <constraint firstItem="B6N-1M-DAj" firstAttribute="top" secondItem="bAx-41-I1D" secondAttribute="bottom" constant="9" id="G3z-XU-JSS"/>
+                                                            <constraint firstItem="B6N-1M-DAj" firstAttribute="leading" secondItem="g1c-MJ-H6C" secondAttribute="leadingMargin" constant="2" id="J53-Qs-ZvK"/>
+                                                            <constraint firstItem="r6w-ok-tpN" firstAttribute="leading" secondItem="g1c-MJ-H6C" secondAttribute="leadingMargin" constant="2" id="JaR-u8-jdy"/>
+                                                            <constraint firstItem="dgr-Wo-dfa" firstAttribute="leading" secondItem="g1c-MJ-H6C" secondAttribute="leadingMargin" constant="2" id="Kti-Ql-x7r"/>
+                                                            <constraint firstItem="B6N-1M-DAj" firstAttribute="top" secondItem="dgr-Wo-dfa" secondAttribute="bottom" constant="18" id="U2o-M8-3FA"/>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="dgr-Wo-dfa" secondAttribute="trailing" constant="34" id="acz-CI-dOc"/>
+                                                            <constraint firstItem="wXg-p0-3So" firstAttribute="top" secondItem="g1c-MJ-H6C" secondAttribute="top" id="eIT-PW-kcl"/>
+                                                            <constraint firstItem="dgr-Wo-dfa" firstAttribute="top" secondItem="wXg-p0-3So" secondAttribute="bottom" constant="5" id="er5-1C-J6u"/>
+                                                            <constraint firstItem="dgr-Wo-dfa" firstAttribute="top" secondItem="PvG-Jb-FHd" secondAttribute="bottom" constant="12" id="iCH-dr-1hU"/>
+                                                            <constraint firstAttribute="trailing" secondItem="PvG-Jb-FHd" secondAttribute="trailing" constant="68" id="im8-de-6y0"/>
+                                                            <constraint firstItem="bAx-41-I1D" firstAttribute="top" secondItem="wXg-p0-3So" secondAttribute="bottom" constant="20" id="o3N-wx-4pw"/>
+                                                            <constraint firstAttribute="bottomMargin" secondItem="r6w-ok-tpN" secondAttribute="bottom" constant="2" id="ou9-Bh-U7d"/>
+                                                            <constraint firstItem="PvG-Jb-FHd" firstAttribute="top" secondItem="g1c-MJ-H6C" secondAttribute="top" constant="104" id="pLU-L4-EuF"/>
+                                                            <constraint firstItem="B6N-1M-DAj" firstAttribute="top" secondItem="bAx-41-I1D" secondAttribute="bottom" constant="9" id="rMn-39-qDN"/>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="r6w-ok-tpN" secondAttribute="trailing" constant="89" id="riq-5v-uXT"/>
+                                                            <constraint firstItem="dgr-Wo-dfa" firstAttribute="top" secondItem="wXg-p0-3So" secondAttribute="bottom" constant="5" id="sgU-nH-aKj"/>
+                                                            <constraint firstAttribute="trailing" secondItem="wXg-p0-3So" secondAttribute="trailing" constant="-1" id="vwo-fp-SEc"/>
+                                                            <constraint firstItem="r6w-ok-tpN" firstAttribute="top" secondItem="B6N-1M-DAj" secondAttribute="bottom" id="zCu-LE-xqh"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <outlet property="EventDate" destination="B6N-1M-DAj" id="Mgc-kq-BdZ"/>
+                                                            <outlet property="EventImage" destination="wXg-p0-3So" id="ebC-M5-IJn"/>
+                                                            <outlet property="EventLoc" destination="bAx-41-I1D" id="KMI-gF-nc0"/>
+                                                            <outlet property="EventName" destination="dgr-Wo-dfa" id="s8p-xm-snX"/>
+                                                            <outlet property="EventPrice" destination="Tby-eX-9SE" id="2Lk-k8-m8N"/>
+                                                            <outlet property="EventTime" destination="r6w-ok-tpN" id="fJD-25-DC7"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="MhM-pX-zfG"/>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="9Cy-ah-rD4"/>
+                                                </connections>
+                                            </collectionView>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4XH-7d-WGk">
+                                                <rect key="frame" x="12" y="43" width="350" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CurrentEvent" translatesAutoresizingMaskIntoConstraints="NO" id="xPB-JU-J6j">
+                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="100"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7J-4h-YmM">
+                                                        <rect key="frame" x="8" y="75" width="79" height="15"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="12"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2h-FG-YdK">
+                                                        <rect key="frame" x="222" y="60" width="120" height="15"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="12"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1x-it-VPq">
+                                                        <rect key="frame" x="222" y="75" width="120" height="15"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="12"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bBf-rA-9xx">
+                                                        <rect key="frame" x="292" y="8" width="50" height="20"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PRICE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIF-yY-qRN">
+                                                                <rect key="frame" x="11" y="4" width="29" height="12"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="10"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.34415090084075928" green="0.79774969816207886" blue="0.98518580198287964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOv-3G-yzw">
+                                                        <rect key="frame" x="8" y="56" width="101" height="22"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="18"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <accessibility key="accessibilityConfiguration" label="Event"/>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HAPPENING RIGHT NOW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tto-mh-Jky">
+                                                <rect key="frame" x="12" y="23" width="146" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="13"/>
+                                                <color key="textColor" red="0.48230850696563721" green="0.48238134384155273" blue="0.4822925329208374" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TODAY'S EVENTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFU-A6-pil">
+                                                <rect key="frame" x="12" y="396" width="103" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="13"/>
+                                                <color key="textColor" red="0.482308507" green="0.48238134379999997" blue="0.48229253290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MY UPCOMING EVENTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aT-2Q-K4i">
+                                                <rect key="frame" x="12" y="163" width="142" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="13"/>
+                                                <color key="textColor" red="0.482308507" green="0.48238134379999997" blue="0.48229253290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.96070033311843872" green="0.96083813905715942" blue="0.96067017316818237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="xHI-KA-OeE" firstAttribute="leading" secondItem="LeK-fT-ab1" secondAttribute="leading" constant="12" id="1yw-ZY-0uh"/>
+                                            <constraint firstItem="xHI-KA-OeE" firstAttribute="top" secondItem="LeK-fT-ab1" secondAttribute="top" constant="418" id="FR9-ln-uLT"/>
+                                            <constraint firstAttribute="bottom" secondItem="xHI-KA-OeE" secondAttribute="bottom" constant="49" id="Ig4-Fl-xWN"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="598" id="eYa-Kq-Gyi"/>
+                                            <constraint firstAttribute="trailing" secondItem="xHI-KA-OeE" secondAttribute="trailing" constant="13" id="nVc-4R-4N1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92540913820266724" green="0.92554211616516113" blue="0.92537993192672729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="LeK-fT-ab1" firstAttribute="leading" secondItem="eHb-TE-TO1" secondAttribute="leading" id="3Q5-U4-Q2C"/>
+                                    <constraint firstAttribute="trailing" secondItem="LeK-fT-ab1" secondAttribute="trailing" id="7Wm-di-DRN"/>
+                                    <constraint firstAttribute="trailing" secondItem="LeK-fT-ab1" secondAttribute="trailing" id="Bwc-gu-6TY"/>
+                                    <constraint firstItem="LeK-fT-ab1" firstAttribute="top" secondItem="eHb-TE-TO1" secondAttribute="top" id="HOs-A4-IQv"/>
+                                    <constraint firstItem="LeK-fT-ab1" firstAttribute="leading" secondItem="eHb-TE-TO1" secondAttribute="leading" id="K5f-pe-qpC"/>
+                                    <constraint firstAttribute="bottom" secondItem="LeK-fT-ab1" secondAttribute="bottom" id="O54-aY-9bA"/>
+                                    <constraint firstAttribute="bottom" secondItem="LeK-fT-ab1" secondAttribute="bottom" id="Wal-na-hGJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="LeK-fT-ab1" secondAttribute="trailing" id="wnn-8w-owj"/>
+                                    <constraint firstItem="LeK-fT-ab1" firstAttribute="top" secondItem="eHb-TE-TO1" secondAttribute="top" id="x6s-Lg-MHj"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96070033311843872" green="0.96083813905715942" blue="0.96067017316818237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LeK-fT-ab1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="1AN-SE-dJs"/>
+                            <constraint firstItem="eHb-TE-TO1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="4O2-36-yT4"/>
+                            <constraint firstItem="eHb-TE-TO1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="M6h-2y-Yo6"/>
+                            <constraint firstItem="eHb-TE-TO1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aEF-b8-tdz"/>
+                            <constraint firstItem="eHb-TE-TO1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="o4e-oN-HMG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Festival App" id="z8D-nV-WwM">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="Home" style="plain" id="UeV-RQ-WdM">
+                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="search" id="z2z-F1-ii8">
+                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <size key="freeformSize" width="375" height="1500"/>
+                    <connections>
+                        <outlet property="TodayCView" destination="xHI-KA-OeE" id="UCs-CO-amq"/>
+                        <outlet property="UpcomingCView" destination="Jew-p7-ZWm" id="d4k-7N-ck8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="464.80000000000001" y="46.776611694152926"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1r4-Yf-3rw">
+            <objects>
+                <navigationController id="yHi-CU-epW" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nhp-H9-qc1">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Myk-g9-dxj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="97X-dt-QfL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-314" y="49"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AddEvent" width="15" height="15"/>
+        <image name="CurrentEvent" width="351" height="234"/>
+        <image name="Home" width="18" height="15.5"/>
+    </resources>
 </document>
