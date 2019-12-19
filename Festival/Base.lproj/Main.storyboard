@@ -406,10 +406,9 @@
                         <viewLayoutGuide key="safeArea" id="ha1-wT-Vgf"/>
                     </view>
                     <connections>
-                        <outlet property="searchContainer" destination="NsI-sY-6QG" id="xJS-if-vH8"/>
                         <outlet property="searchDisplayController" destination="Bwm-Sg-lQA" id="8Sk-Yw-fjZ"/>
-                        <outlet property="searchViewContainer" destination="fTP-VN-vRN" id="jnV-7I-uRq"/>
-                        <outlet property="tableContainer" destination="oEO-pm-e7P" id="mUc-1G-pnS"/>
+                        <outlet property="searchViewContainer" destination="NsI-sY-6QG" id="tPJ-18-W0Q"/>
+                        <outlet property="tableView" destination="oEO-pm-e7P" id="SnG-ld-zaM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vaa-Bb-NTm" userLabel="First Responder" sceneMemberID="firstResponder"/>
