@@ -105,16 +105,11 @@
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </view>
-                                                                <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaW-bs-fpD">
-                                                                    <rect key="frame" x="327" y="73" width="17" height="22"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <state key="normal" title="Button" image="AddEvent"/>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1BT-px-QWU">
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1BT-px-QWU">
                                                                     <rect key="frame" x="0.0" y="0.0" width="319" height="100"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <connections>
-                                                                        <segue destination="WTI-GC-KnB" kind="show" identifier="showDetails" id="UHb-EF-mut"/>
+                                                                        <action selector="SegueButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tx4-UC-7wO"/>
                                                                     </connections>
                                                                 </button>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Description" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOM-bY-naa">
@@ -124,14 +119,17 @@
                                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
+                                                                <button opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaW-bs-fpD">
+                                                                    <rect key="frame" x="327" y="71" width="18" height="22"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" title="Button" image="AddEvent"/>
+                                                                    <connections>
+                                                                        <action selector="AddButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NMb-zk-wnI"/>
+                                                                    </connections>
+                                                                </button>
                                                             </subviews>
                                                         </view>
                                                         <color key="backgroundColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <variation key="default">
-                                                            <mask key="subviews">
-                                                                <exclude reference="1BT-px-QWU"/>
-                                                            </mask>
-                                                        </variation>
                                                         <connections>
                                                             <outlet property="AddButton" destination="GaW-bs-fpD" id="Gbt-YT-S1L"/>
                                                             <outlet property="EventDate" destination="TdL-8j-BIF" id="4zw-77-BVM"/>
@@ -411,6 +409,7 @@ events! </string>
                     <size key="freeformSize" width="375" height="1500"/>
                     <connections>
                         <outlet property="NoEventsNow" destination="DRP-Oe-g0H" id="ukr-Zy-bLt"/>
+                        <outlet property="NoUpcoming" destination="mVK-eE-nHP" id="rEn-Nb-4k5"/>
                         <outlet property="NowEventDate" destination="o2h-FG-YdK" id="sVp-DS-UYb"/>
                         <outlet property="NowEventLoc" destination="D7J-4h-YmM" id="mHY-Nl-unA"/>
                         <outlet property="NowEventName" destination="SOv-3G-yzw" id="Yv4-eI-pev"/>
@@ -420,16 +419,17 @@ events! </string>
                         <outlet property="TodayCView" destination="xHI-KA-OeE" id="UCs-CO-amq"/>
                         <outlet property="UpcomingCView" destination="Jew-p7-ZWm" id="d4k-7N-ck8"/>
                         <segue destination="L2b-XH-P6i" kind="show" identifier="SearchView" id="MAr-qN-xyp"/>
+                        <segue destination="WTI-GC-KnB" kind="show" identifier="showDetails" animates="NO" id="3ep-TB-gYw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="464.80000000000001" y="46.776611694152926"/>
         </scene>
-        <!--View Controller-->
+        <!--Detailed Info-->
         <scene sceneID="5qo-PK-EV0">
             <objects>
-                <viewController id="WTI-GC-KnB" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailedInfo" id="WTI-GC-KnB" customClass="DetailedInfo" customModule="Festival" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ULy-W9-xwm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -443,7 +443,7 @@ events! </string>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKF-3r-m0G">
-                                        <rect key="frame" x="8" y="117" width="79" height="15"/>
+                                        <rect key="frame" x="8" y="117" width="214" height="15"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -483,28 +483,19 @@ events! </string>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ikh-hH-eIX">
-                                        <rect key="frame" x="8" y="100" width="101" height="22"/>
+                                        <rect key="frame" x="8" y="100" width="214" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5G-l7-UMa">
-                                        <rect key="frame" x="18" y="171" width="274" height="225"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5G-l7-UMa">
+                                        <rect key="frame" x="18" y="171" width="274" height="280"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="11"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxE-sz-TGT">
-                                        <rect key="frame" x="0.0" y="410" width="311" height="49"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.45724374055862427" green="0.79576236009597778" blue="0.97120672464370728" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="15"/>
-                                        <state key="normal" title="ADD TO MY EVENTS">
-                                            <color key="titleColor" red="0.96070033310000003" green="0.96083813910000004" blue="0.96067017320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
@@ -513,6 +504,15 @@ events! </string>
                         <viewLayoutGuide key="safeArea" id="Enf-4r-vu8"/>
                     </view>
                     <navigationItem key="navigationItem" id="YTY-Jq-zNA"/>
+                    <connections>
+                        <outlet property="EventDate" destination="hxL-hC-8AK" id="hAC-dU-m0A"/>
+                        <outlet property="EventDesc" destination="J5G-l7-UMa" id="IsH-vw-gOK"/>
+                        <outlet property="EventImage" destination="lz3-r4-7dN" id="Poi-Uy-X2X"/>
+                        <outlet property="EventLoc" destination="AKF-3r-m0G" id="qrN-R9-FOc"/>
+                        <outlet property="EventName" destination="Ikh-hH-eIX" id="AdN-6X-ccL"/>
+                        <outlet property="EventPrice" destination="NLq-Fm-K3c" id="SUI-QH-N7H"/>
+                        <outlet property="EventTime" destination="ark-cr-UgY" id="q12-CD-MpC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lQJ-tp-jKJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

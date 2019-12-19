@@ -44,13 +44,23 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var EventPhone = [String]()
     
     //My
-    var MyEventImages = [String]()
+    var MyEventImages = [UIImage]()
     var MyEventNames = [String]()
     var MyEventDates = [String]()
     var MyEventLocs = [String]()
     var MyEventStart = [String]()
     var MyEventEnd = [String]()
     var MyEventPrices = [String]()
+    @IBOutlet weak var NoUpcoming: UILabel!
+    
+    //Segue variables
+    var passedName = String()
+    var passedLoc = String()
+    var passedDesc = String()
+    var passedDate = String()
+    var passedTime = String()
+    var passedPrice = String()
+    var passedImage = UIImage()
     
     //Now
     @IBOutlet weak var NoEventsNow: UILabel!
@@ -61,17 +71,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var NowEventLoc: UILabel!
     @IBOutlet weak var NowEventName: UILabel!
     
-    var UpcomingImageArray = [UIImage]()
-    
-    func getTimeDiff(time1: String, time2: String) -> Int {
-        
-
-        
-        
-        
-        
-    }
-
     func getInfo() {
         
         let semaphore = DispatchSemaphore (value: 0)
@@ -225,6 +224,38 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             return MyEventNames.count
         }
     }
+    @IBAction func AddButton(_ sender: UIButton) {
+        print(sender.tag)
+        
+        MyEventImages.append(EventImages[sender.tag])
+        MyEventNames.append(EventNames[sender.tag])
+        MyEventDates.append(EventDates[sender.tag])
+        MyEventLocs.append(EventLocs[sender.tag])
+        MyEventStart.append(EventStart[sender.tag])
+        MyEventEnd.append(EventEnd[sender.tag])
+        MyEventPrices.append(EventPrices[sender.tag])
+        
+        NoUpcoming.isHidden = true
+        
+        
+        self.UpcomingCView.reloadData()
+        
+    }
+    
+    @IBAction func SegueButton(_ sender: UIButton) {
+        
+        passedName = EventNames[sender.tag]
+        passedLoc = EventLocs[sender.tag]
+        passedDesc = EventDesc[sender.tag]
+        passedDate = EventDates[sender.tag]
+        passedTime = EventStart[sender.tag] + " - " + EventEnd[sender.tag]
+        passedPrice = EventPrices[sender.tag]
+        passedImage = EventImages[sender.tag]
+        
+        performSegue(withIdentifier: "showDetails", sender: nil)
+        
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
@@ -240,6 +271,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 cell.EventTime.text = EventStart[indexPath.row] + " - " + EventEnd[indexPath.row]
                 cell.EventDescription.text = EventDesc[indexPath.row]
                 cell.NoEvents.isHidden = true
+            
+                cell.AddButton.tag = indexPath.row
+                cell.AddButton.addTarget(self,
+                                         action: #selector(self.AddButton),
+                    for: .touchUpInside)
+            
+                cell.SegueButton.tag = indexPath.row
+                cell.SegueButton.addTarget(self,
+                                     action: #selector(self.SegueButton),
+                for: .touchUpInside)
                 
                 return cell
         }
@@ -247,12 +288,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UpcomingCollectionViewCell", for: indexPath) as! UpcomingCollectionViewCell
             
-//            cell.EventImage.image = UpcomingImageArray[indexPath.row]
-//            cell.EventPrice.text = EventPrices[indexPath.row]
-//            cell.EventName.text = EventNames[indexPath.row]
-//            cell.EventLoc.text = EventLocs[indexPath.row]
-//            cell.EventDate.text = EventDates[indexPath.row]
-//            cell.EventTime.text = EventStart[indexPath.row] + " - " + EventEnd[indexPath.row]
+            cell.EventImage.image = MyEventImages[indexPath.row]
+            cell.EventPrice.text = MyEventPrices[indexPath.row]
+            cell.EventName.text = MyEventNames[indexPath.row]
+            cell.EventLoc.text = MyEventLocs[indexPath.row]
+            cell.EventDate.text = MyEventDates[indexPath.row]
+            cell.EventTime.text = MyEventStart[indexPath.row] + " - " + EventEnd[indexPath.row]
             
             return cell
             
@@ -276,6 +317,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Do any additional setup after loading the view.
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetails" {
+            let destvc = segue.destination as! DetailedInfo
+            
+            destvc.passedName = passedName
+            destvc.passedLoc = passedLoc
+            destvc.passedDesc = passedDesc
+            destvc.passedDate = passedDate
+            destvc.passedTime = passedTime
+            destvc.passedPrice = passedPrice
+            destvc.passedImage = passedImage
+        }
+    }
     
     @IBAction func searchButtonAction(_ sender: UIBarButtonItem) {
         // open search view to let the user search for the event

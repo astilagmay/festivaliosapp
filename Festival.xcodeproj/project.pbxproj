@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A0A030523ABDEF60018A7AF /* DetailedInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A030423ABDEF60018A7AF /* DetailedInfo.swift */; };
 		0A7502D123A69A4D0081A276 /* UpcomingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7502D023A69A4D0081A276 /* UpcomingCollectionViewCell.swift */; };
 		0A7502D323A69A600081A276 /* TodayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7502D223A69A600081A276 /* TodayCollectionViewCell.swift */; };
 		0A9599B923A6ADDF00997E9F /* TodayCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9599B823A6ADDF00997E9F /* TodayCollectionView.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A0A030423ABDEF60018A7AF /* DetailedInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedInfo.swift; sourceTree = "<group>"; };
 		0A7502D023A69A4D0081A276 /* UpcomingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingCollectionViewCell.swift; sourceTree = "<group>"; };
 		0A7502D223A69A600081A276 /* TodayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionViewCell.swift; sourceTree = "<group>"; };
 		0A9599B823A6ADDF00997E9F /* TodayCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionView.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				0AA4B2292377E3D4007ADB92 /* AppDelegate.swift */,
 				0A9599B823A6ADDF00997E9F /* TodayCollectionView.swift */,
 				0AA4B22B2377E3D4007ADB92 /* ViewController.swift */,
+				0A0A030423ABDEF60018A7AF /* DetailedInfo.swift */,
 				0A7502D023A69A4D0081A276 /* UpcomingCollectionViewCell.swift */,
 				0A7502D223A69A600081A276 /* TodayCollectionViewCell.swift */,
 				0AA4B2302377E3D8007ADB92 /* Assets.xcassets */,
@@ -324,6 +327,7 @@
 				CE67151723AAC743005E17F3 /* LocationModel.swift in Sources */,
 				CE67151923AAF561005E17F3 /* SearchView.swift in Sources */,
 				0A7502D323A69A600081A276 /* TodayCollectionViewCell.swift in Sources */,
+				0A0A030523ABDEF60018A7AF /* DetailedInfo.swift in Sources */,
 				0A7502D123A69A4D0081A276 /* UpcomingCollectionViewCell.swift in Sources */,
 				CE67151323AAC3F0005E17F3 /* HomeModel.swift in Sources */,
 				0AA4B22C2377E3D4007ADB92 /* ViewController.swift in Sources */,
