@@ -17,4 +17,8 @@ class TodayCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var EventDate: UILabel!
     @IBOutlet weak var EventTime: UILabel!
     @IBOutlet weak var EventDescription: UILabel!
+    @IBOutlet weak var PriceBox: UIView!
+    @IBOutlet weak var AddButton: UIButton!
+    @IBOutlet weak var SegueButton: UIButton!
+    @IBOutlet weak var NoEvents: UILabel!
 }

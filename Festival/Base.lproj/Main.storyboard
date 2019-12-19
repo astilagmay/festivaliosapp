@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yHi-CU-epW">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yHi-CU-epW">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,16 +19,16 @@
         <!--Festival App-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ViewControllerA" id="BYZ-38-t0r" customClass="ViewController" customModule="Festival" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewControllerA" automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Festival" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1456"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eHb-TE-TO1">
-                                <rect key="frame" x="0.0" y="64" width="375" height="1436"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHb-TE-TO1">
+                                <rect key="frame" x="0.0" y="44" width="375" height="1456"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LeK-fT-ab1">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1436"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1456"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xHI-KA-OeE" customClass="TodayCollectionView" customModule="Festival" customModuleProvider="target">
                                                 <rect key="frame" x="12" y="418" width="350" height="969"/>
@@ -41,6 +39,13 @@
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
+                                                <label key="backgroundView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No events to display" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cdb-cs-SDX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="969"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="13"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TodayCollectionViewCell" id="xpb-dt-OYP" customClass="TodayCollectionViewCell" customModule="Festival" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="350" height="100"/>
@@ -53,15 +58,15 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="137" height="100"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NzK-fF-2hk">
-                                                                    <rect key="frame" x="150" y="10" width="73" height="16"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NzK-fF-2hk">
+                                                                    <rect key="frame" x="150" y="10" width="132" height="16"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="13"/>
                                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="riD-ep-Okt">
-                                                                    <rect key="frame" x="150" y="25" width="53" height="10"/>
+                                                                    <rect key="frame" x="150" y="25" width="132" height="10"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="8"/>
                                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -75,9 +80,9 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0a-iu-PgO">
-                                                                    <rect key="frame" x="290" y="23" width="48" height="10"/>
+                                                                    <rect key="frame" x="233" y="23" width="105" height="10"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="8"/>
+                                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="7"/>
                                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -85,7 +90,7 @@
                                                                     <rect key="frame" x="75" y="75" width="50" height="15"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PRICE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4G-YF-WAf">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PRICE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4G-YF-WAf">
                                                                             <rect key="frame" x="11" y="1" width="29" height="12"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                             <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="10"/>
@@ -100,22 +105,35 @@
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </view>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOM-bY-naa">
-                                                                    <rect key="frame" x="150" y="40" width="180" height="50"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="8"/>
-                                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
                                                                 <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaW-bs-fpD">
                                                                     <rect key="frame" x="327" y="73" width="17" height="22"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <state key="normal" title="Button" image="AddEvent"/>
                                                                 </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1BT-px-QWU">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="319" height="100"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <connections>
+                                                                        <segue destination="WTI-GC-KnB" kind="show" identifier="showDetails" id="UHb-EF-mut"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Description" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOM-bY-naa">
+                                                                    <rect key="frame" x="150" y="41" width="169" height="50"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="8"/>
+                                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
                                                             </subviews>
                                                         </view>
                                                         <color key="backgroundColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <variation key="default">
+                                                            <mask key="subviews">
+                                                                <exclude reference="1BT-px-QWU"/>
+                                                            </mask>
+                                                        </variation>
                                                         <connections>
+                                                            <outlet property="AddButton" destination="GaW-bs-fpD" id="Gbt-YT-S1L"/>
                                                             <outlet property="EventDate" destination="TdL-8j-BIF" id="4zw-77-BVM"/>
                                                             <outlet property="EventDescription" destination="TOM-bY-naa" id="0Ms-gN-fjn"/>
                                                             <outlet property="EventImage" destination="9sh-2W-rAV" id="ysA-bs-IT4"/>
@@ -123,6 +141,9 @@
                                                             <outlet property="EventName" destination="NzK-fF-2hk" id="llK-2m-w9m"/>
                                                             <outlet property="EventPrice" destination="D4G-YF-WAf" id="e7U-5A-oyh"/>
                                                             <outlet property="EventTime" destination="c0a-iu-PgO" id="Yn8-pK-lLU"/>
+                                                            <outlet property="NoEvents" destination="DRP-Oe-g0H" id="NLR-oN-c4Q"/>
+                                                            <outlet property="PriceBox" destination="n0C-PX-r46" id="a6y-lw-vcy"/>
+                                                            <outlet property="SegueButton" destination="1BT-px-QWU" id="XHz-x9-7w4"/>
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>
@@ -141,6 +162,16 @@
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
+                                                <label key="backgroundView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mVK-eE-nHP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="195"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <string key="text">No upcoming events! 
+
+events! </string>
+                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="13"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UpcomingCollectionViewCell" id="g1c-MJ-H6C" customClass="UpcomingCollectionViewCell" customModule="Festival" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="125" height="195"/>
@@ -153,25 +184,25 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="126" height="126"/>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgr-Wo-dfa">
-                                                                    <rect key="frame" x="10" y="131" width="73" height="16"/>
+                                                                    <rect key="frame" x="10" y="131" width="105" height="16"/>
                                                                     <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="13"/>
                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAx-41-I1D">
-                                                                    <rect key="frame" x="10" y="146" width="53" height="10"/>
+                                                                    <rect key="frame" x="10" y="146" width="105" height="10"/>
                                                                     <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="8"/>
                                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6N-1M-DAj">
-                                                                    <rect key="frame" x="10" y="165" width="17" height="10"/>
+                                                                    <rect key="frame" x="10" y="165" width="105" height="10"/>
                                                                     <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="8"/>
                                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6w-ok-tpN">
-                                                                    <rect key="frame" x="10" y="175" width="18" height="10"/>
+                                                                    <rect key="frame" x="10" y="175" width="105" height="10"/>
                                                                     <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="8"/>
                                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -205,15 +236,15 @@
                                                             <constraint firstItem="r6w-ok-tpN" firstAttribute="top" secondItem="B6N-1M-DAj" secondAttribute="bottom" id="2rv-ag-Uje"/>
                                                             <constraint firstItem="wXg-p0-3So" firstAttribute="leading" secondItem="g1c-MJ-H6C" secondAttribute="leading" id="4SQ-Zy-kOe"/>
                                                             <constraint firstItem="PvG-Jb-FHd" firstAttribute="leading" secondItem="g1c-MJ-H6C" secondAttribute="leading" constant="7" id="8Md-ez-Zao"/>
-                                                            <constraint firstAttribute="trailingMargin" secondItem="bAx-41-I1D" secondAttribute="trailing" constant="54" id="ALl-Wv-YLa"/>
-                                                            <constraint firstAttribute="trailingMargin" secondItem="B6N-1M-DAj" secondAttribute="trailing" constant="90" id="B3y-Wn-VTE"/>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="bAx-41-I1D" secondAttribute="trailing" constant="2" id="ALl-Wv-YLa"/>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="B6N-1M-DAj" secondAttribute="trailing" constant="2" id="B3y-Wn-VTE"/>
                                                             <constraint firstItem="bAx-41-I1D" firstAttribute="leading" secondItem="g1c-MJ-H6C" secondAttribute="leadingMargin" constant="2" id="CgM-Ii-gyt"/>
                                                             <constraint firstItem="B6N-1M-DAj" firstAttribute="top" secondItem="bAx-41-I1D" secondAttribute="bottom" constant="9" id="G3z-XU-JSS"/>
                                                             <constraint firstItem="B6N-1M-DAj" firstAttribute="leading" secondItem="g1c-MJ-H6C" secondAttribute="leadingMargin" constant="2" id="J53-Qs-ZvK"/>
                                                             <constraint firstItem="r6w-ok-tpN" firstAttribute="leading" secondItem="g1c-MJ-H6C" secondAttribute="leadingMargin" constant="2" id="JaR-u8-jdy"/>
                                                             <constraint firstItem="dgr-Wo-dfa" firstAttribute="leading" secondItem="g1c-MJ-H6C" secondAttribute="leadingMargin" constant="2" id="Kti-Ql-x7r"/>
                                                             <constraint firstItem="B6N-1M-DAj" firstAttribute="top" secondItem="dgr-Wo-dfa" secondAttribute="bottom" constant="18" id="U2o-M8-3FA"/>
-                                                            <constraint firstAttribute="trailingMargin" secondItem="dgr-Wo-dfa" secondAttribute="trailing" constant="34" id="acz-CI-dOc"/>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="dgr-Wo-dfa" secondAttribute="trailing" constant="2" id="acz-CI-dOc"/>
                                                             <constraint firstItem="wXg-p0-3So" firstAttribute="top" secondItem="g1c-MJ-H6C" secondAttribute="top" id="eIT-PW-kcl"/>
                                                             <constraint firstItem="dgr-Wo-dfa" firstAttribute="top" secondItem="wXg-p0-3So" secondAttribute="bottom" constant="5" id="er5-1C-J6u"/>
                                                             <constraint firstItem="dgr-Wo-dfa" firstAttribute="top" secondItem="PvG-Jb-FHd" secondAttribute="bottom" constant="12" id="iCH-dr-1hU"/>
@@ -222,7 +253,7 @@
                                                             <constraint firstAttribute="bottomMargin" secondItem="r6w-ok-tpN" secondAttribute="bottom" constant="2" id="ou9-Bh-U7d"/>
                                                             <constraint firstItem="PvG-Jb-FHd" firstAttribute="top" secondItem="g1c-MJ-H6C" secondAttribute="top" constant="104" id="pLU-L4-EuF"/>
                                                             <constraint firstItem="B6N-1M-DAj" firstAttribute="top" secondItem="bAx-41-I1D" secondAttribute="bottom" constant="9" id="rMn-39-qDN"/>
-                                                            <constraint firstAttribute="trailingMargin" secondItem="r6w-ok-tpN" secondAttribute="trailing" constant="89" id="riq-5v-uXT"/>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="r6w-ok-tpN" secondAttribute="trailing" constant="2" id="riq-5v-uXT"/>
                                                             <constraint firstItem="dgr-Wo-dfa" firstAttribute="top" secondItem="wXg-p0-3So" secondAttribute="bottom" constant="5" id="sgU-nH-aKj"/>
                                                             <constraint firstAttribute="trailing" secondItem="wXg-p0-3So" secondAttribute="trailing" constant="-1" id="vwo-fp-SEc"/>
                                                             <constraint firstItem="r6w-ok-tpN" firstAttribute="top" secondItem="B6N-1M-DAj" secondAttribute="bottom" id="zCu-LE-xqh"/>
@@ -276,7 +307,7 @@
                                                         <rect key="frame" x="292" y="8" width="50" height="20"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PRICE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIF-yY-qRN">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PRICE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIF-yY-qRN">
                                                                 <rect key="frame" x="11" y="4" width="29" height="12"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="10"/>
@@ -298,6 +329,13 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No events happening right now" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRP-Oe-g0H">
+                                                        <rect key="frame" x="81" y="62" width="188" height="16"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="13"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <accessibility key="accessibilityConfiguration" label="Event"/>
@@ -309,8 +347,8 @@
                                                 <color key="textColor" red="0.48230850696563721" green="0.48238134384155273" blue="0.4822925329208374" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TODAY'S EVENTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFU-A6-pil">
-                                                <rect key="frame" x="12" y="396" width="103" height="16"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TODAY AND UPCOMING EVENTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFU-A6-pil">
+                                                <rect key="frame" x="12" y="396" width="193" height="16"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="13"/>
                                                 <color key="textColor" red="0.482308507" green="0.48238134379999997" blue="0.48229253290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -353,11 +391,12 @@
                             <constraint firstItem="LeK-fT-ab1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="1AN-SE-dJs"/>
                             <constraint firstItem="eHb-TE-TO1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="4O2-36-yT4"/>
                             <constraint firstItem="eHb-TE-TO1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="M6h-2y-Yo6"/>
-                            <constraint firstItem="eHb-TE-TO1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aEF-b8-tdz"/>
+                            <constraint firstItem="eHb-TE-TO1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="aEF-b8-tdz"/>
                             <constraint firstItem="eHb-TE-TO1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="o4e-oN-HMG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="Festival App" id="z8D-nV-WwM">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="Home" style="plain" id="UeV-RQ-WdM">
                             <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -371,14 +410,113 @@
                     </navigationItem>
                     <size key="freeformSize" width="375" height="1500"/>
                     <connections>
+                        <outlet property="NoEventsNow" destination="DRP-Oe-g0H" id="ukr-Zy-bLt"/>
+                        <outlet property="NowEventDate" destination="o2h-FG-YdK" id="sVp-DS-UYb"/>
+                        <outlet property="NowEventLoc" destination="D7J-4h-YmM" id="mHY-Nl-unA"/>
+                        <outlet property="NowEventName" destination="SOv-3G-yzw" id="Yv4-eI-pev"/>
+                        <outlet property="NowEventPrice" destination="nIF-yY-qRN" id="kTQ-Dg-sE7"/>
+                        <outlet property="NowEventPriceBox" destination="bBf-rA-9xx" id="AKq-tz-ppb"/>
+                        <outlet property="NowEventTime" destination="V1x-it-VPq" id="638-2h-uHQ"/>
                         <outlet property="TodayCView" destination="xHI-KA-OeE" id="UCs-CO-amq"/>
                         <outlet property="UpcomingCView" destination="Jew-p7-ZWm" id="d4k-7N-ck8"/>
-                        <segue destination="L2b-XH-P6i" kind="show" id="MAr-qN-xyp"/>
+                        <segue destination="L2b-XH-P6i" kind="show" identifier="SearchView" id="MAr-qN-xyp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="464.80000000000001" y="46.776611694152926"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5qo-PK-EV0">
+            <objects>
+                <viewController id="WTI-GC-KnB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ULy-W9-xwm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iMO-p8-cmn">
+                                <rect key="frame" x="32" y="104" width="311" height="459"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TodayEvent" translatesAutoresizingMaskIntoConstraints="NO" id="lz3-r4-7dN">
+                                        <rect key="frame" x="0.0" y="0.0" width="311" height="140"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKF-3r-m0G">
+                                        <rect key="frame" x="8" y="117" width="79" height="15"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxL-hC-8AK">
+                                        <rect key="frame" x="183" y="104" width="120" height="15"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ark-cr-UgY">
+                                        <rect key="frame" x="183" y="117" width="120" height="15"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6eD-TU-0nh">
+                                        <rect key="frame" x="253" y="8" width="50" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PRICE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLq-Fm-K3c">
+                                                <rect key="frame" x="11" y="4" width="29" height="12"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="10"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.34415090079999999" green="0.79774969819999997" blue="0.98518580200000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ikh-hH-eIX">
+                                        <rect key="frame" x="8" y="100" width="101" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5G-l7-UMa">
+                                        <rect key="frame" x="18" y="171" width="274" height="225"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxE-sz-TGT">
+                                        <rect key="frame" x="0.0" y="410" width="311" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.45724374055862427" green="0.79576236009597778" blue="0.97120672464370728" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="15"/>
+                                        <state key="normal" title="ADD TO MY EVENTS">
+                                            <color key="titleColor" red="0.96070033310000003" green="0.96083813910000004" blue="0.96067017320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96070033311843872" green="0.96083813905715942" blue="0.96067017316818237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Enf-4r-vu8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YTY-Jq-zNA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lQJ-tp-jKJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1280.8" y="-613.04347826086962"/>
         </scene>
         <!--Search View-->
         <scene sceneID="mBX-Gk-yEn">
@@ -429,7 +567,7 @@
             <objects>
                 <navigationController id="yHi-CU-epW" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nhp-H9-qc1">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -447,6 +585,7 @@
     <resources>
         <image name="AddEvent" width="15" height="15"/>
         <image name="CurrentEvent" width="351" height="234"/>
-        <image name="Home" width="18" height="15"/>
+        <image name="Home" width="18" height="15.5"/>
+        <image name="TodayEvent" width="164" height="108"/>
     </resources>
 </document>
