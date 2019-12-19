@@ -62,7 +62,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         // Do any additional setup after loading the view.
     }
-
+    
+    
+    @IBAction func searchButtonAction(_ sender: UIBarButtonItem) {
+        // open search view to let the user search for the event
+        self.performSegue(withIdentifier: "SearchView", sender: self)
+    }
+    
 
 }
 
