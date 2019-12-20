@@ -65,9 +65,8 @@
                                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="riD-ep-Okt">
-                                                                    <rect key="frame" x="150" y="25" width="132" height="10"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Event Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="riD-ep-Okt">
+                                                                    <rect key="frame" x="150" y="25" width="132" height="9"/>
                                                                     <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="8"/>
                                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -114,7 +113,7 @@
                                                                         <action selector="SegueButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tx4-UC-7wO"/>
                                                                     </connections>
                                                                 </button>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Event Description" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOM-bY-naa">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Event Description" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOM-bY-naa">
                                                                     <rect key="frame" x="150" y="41" width="169" height="50"/>
                                                                     <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="8"/>
                                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -135,10 +134,15 @@
                                                         <color key="backgroundColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstItem="NzK-fF-2hk" firstAttribute="top" secondItem="xpb-dt-OYP" secondAttribute="topMargin" constant="2" id="2Ni-59-w3j"/>
+                                                            <constraint firstItem="riD-ep-Okt" firstAttribute="leading" secondItem="9sh-2W-rAV" secondAttribute="trailing" constant="13" id="556-Hi-Jyt"/>
                                                             <constraint firstItem="NzK-fF-2hk" firstAttribute="leading" secondItem="9sh-2W-rAV" secondAttribute="trailing" constant="13" id="6xE-ip-rOk"/>
+                                                            <constraint firstItem="TOM-bY-naa" firstAttribute="leading" secondItem="9sh-2W-rAV" secondAttribute="trailing" constant="13" id="Bv0-Kz-nmT"/>
                                                             <constraint firstAttribute="trailingMargin" secondItem="c0a-iu-PgO" secondAttribute="trailing" constant="4" id="Efm-ez-m8o"/>
                                                             <constraint firstAttribute="trailing" secondItem="GaW-bs-fpD" secondAttribute="trailing" constant="5" id="Ja3-40-7cO"/>
+                                                            <constraint firstItem="GaW-bs-fpD" firstAttribute="leading" secondItem="TOM-bY-naa" secondAttribute="trailing" constant="8" id="Q5D-U5-iL3"/>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="riD-ep-Okt" secondAttribute="trailing" constant="60" id="RzZ-Rc-HAS"/>
                                                             <constraint firstItem="NzK-fF-2hk" firstAttribute="leading" secondItem="9sh-2W-rAV" secondAttribute="trailing" constant="13" id="WZm-5G-Dmd"/>
+                                                            <constraint firstItem="riD-ep-Okt" firstAttribute="top" secondItem="xpb-dt-OYP" secondAttribute="topMargin" constant="17" id="XBv-gs-xMn"/>
                                                             <constraint firstAttribute="bottom" secondItem="GaW-bs-fpD" secondAttribute="bottom" constant="7" id="XvQ-51-BhI"/>
                                                             <constraint firstItem="GaW-bs-fpD" firstAttribute="leading" secondItem="9sh-2W-rAV" secondAttribute="trailing" constant="139" id="Ycc-qq-lr6"/>
                                                             <constraint firstAttribute="trailingMargin" secondItem="TdL-8j-BIF" secondAttribute="trailing" constant="4" id="asQ-lC-CLj"/>
@@ -224,9 +228,8 @@ events! </string>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PvG-Jb-FHd">
                                                                     <rect key="frame" x="7" y="104" width="50" height="15"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PRICE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tby-eX-9SE">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRICE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tby-eX-9SE">
                                                                             <rect key="frame" x="11" y="1" width="29" height="12"/>
-                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                             <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="10"/>
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
@@ -234,8 +237,12 @@ events! </string>
                                                                     </subviews>
                                                                     <color key="backgroundColor" red="0.34415090079999999" green="0.79774969819999997" blue="0.98518580200000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <constraints>
+                                                                        <constraint firstItem="Tby-eX-9SE" firstAttribute="top" secondItem="PvG-Jb-FHd" secondAttribute="top" constant="1" id="AXw-Ag-VWs"/>
+                                                                        <constraint firstItem="Tby-eX-9SE" firstAttribute="leading" secondItem="PvG-Jb-FHd" secondAttribute="leading" constant="11" id="BPK-9S-lc8"/>
                                                                         <constraint firstAttribute="width" constant="50" id="Che-D9-CUG"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="Tby-eX-9SE" secondAttribute="trailing" constant="10" id="MiS-ke-6tq"/>
                                                                         <constraint firstAttribute="height" constant="15" id="dGB-nS-KCF"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="Tby-eX-9SE" secondAttribute="bottom" constant="2" id="oZu-sd-dFo"/>
                                                                     </constraints>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -379,9 +386,8 @@ events! </string>
                                                     <constraint firstItem="DRP-Oe-g0H" firstAttribute="leading" secondItem="4XH-7d-WGk" secondAttribute="leading" constant="81" id="wVJ-1q-oI6"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HAPPENING RIGHT NOW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tto-mh-Jky">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HAPPENING RIGHT NOW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tto-mh-Jky">
                                                 <rect key="frame" x="12" y="23" width="146" height="16"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="13"/>
                                                 <color key="textColor" red="0.48230850696563721" green="0.48238134384155273" blue="0.4822925329208374" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -395,7 +401,7 @@ events! </string>
                                                 <color key="textColor" red="0.482308507" green="0.48238134379999997" blue="0.48229253290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="MY UPCOMING EVENTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aT-2Q-K4i">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY UPCOMING EVENTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aT-2Q-K4i">
                                                 <rect key="frame" x="12" y="163" width="147.5" height="16"/>
                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="13"/>
                                                 <color key="textColor" red="0.482308507" green="0.48238134379999997" blue="0.48229253290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -407,14 +413,18 @@ events! </string>
                                             <constraint firstItem="xHI-KA-OeE" firstAttribute="leading" secondItem="LeK-fT-ab1" secondAttribute="leading" constant="12" id="1yw-ZY-0uh"/>
                                             <constraint firstItem="xHI-KA-OeE" firstAttribute="top" secondItem="LeK-fT-ab1" secondAttribute="top" constant="418" id="FR9-ln-uLT"/>
                                             <constraint firstAttribute="bottom" secondItem="xHI-KA-OeE" secondAttribute="bottom" constant="49" id="Ig4-Fl-xWN"/>
+                                            <constraint firstItem="Tto-mh-Jky" firstAttribute="leading" secondItem="LeK-fT-ab1" secondAttribute="leading" constant="12" id="Jyk-pm-cpA"/>
                                             <constraint firstItem="xHI-KA-OeE" firstAttribute="top" secondItem="IFU-A6-pil" secondAttribute="bottom" constant="6" id="MBj-Yf-mrr"/>
                                             <constraint firstItem="IFU-A6-pil" firstAttribute="leading" secondItem="LeK-fT-ab1" secondAttribute="leading" constant="12" id="MPy-ot-ujL"/>
                                             <constraint firstItem="Jew-p7-ZWm" firstAttribute="top" secondItem="0aT-2Q-K4i" secondAttribute="bottom" constant="4" id="VQC-6A-ehL"/>
+                                            <constraint firstItem="Tto-mh-Jky" firstAttribute="top" secondItem="LeK-fT-ab1" secondAttribute="top" constant="23" id="XfL-ad-1o3"/>
                                             <constraint firstItem="IFU-A6-pil" firstAttribute="top" secondItem="Jew-p7-ZWm" secondAttribute="bottom" constant="18" id="ZvZ-WZ-O4l"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="598" id="eYa-Kq-Gyi"/>
                                             <constraint firstItem="0aT-2Q-K4i" firstAttribute="leading" secondItem="LeK-fT-ab1" secondAttribute="leading" constant="12" id="i59-xQ-KQq"/>
+                                            <constraint firstItem="4XH-7d-WGk" firstAttribute="top" secondItem="Tto-mh-Jky" secondAttribute="bottom" constant="4" id="lVk-tE-hxJ"/>
                                             <constraint firstAttribute="trailing" secondItem="xHI-KA-OeE" secondAttribute="trailing" constant="13" id="nVc-4R-4N1"/>
                                             <constraint firstAttribute="trailing" secondItem="0aT-2Q-K4i" secondAttribute="trailing" constant="215.5" id="plh-1b-Vob"/>
+                                            <constraint firstAttribute="trailing" secondItem="Tto-mh-Jky" secondAttribute="trailing" constant="217" id="wAT-jA-LyV"/>
                                             <constraint firstItem="0aT-2Q-K4i" firstAttribute="top" secondItem="4XH-7d-WGk" secondAttribute="bottom" constant="20" id="xQA-au-3FQ"/>
                                             <constraint firstAttribute="trailing" secondItem="IFU-A6-pil" secondAttribute="trailing" constant="162.5" id="zMv-bf-p2v"/>
                                         </constraints>
