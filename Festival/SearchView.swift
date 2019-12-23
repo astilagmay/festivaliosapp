@@ -8,10 +8,7 @@
 
 import UIKit
 
-class SearchView: UIViewController, HomeModelProtocol{
-    func itemsDownloaded(items: NSArray) {
-        
-    }
+class SearchView: UIViewController{
     
     @IBOutlet var searchViewContainer: UIView!
     @IBOutlet weak var tableView: UITableView!
@@ -31,6 +28,7 @@ class SearchView: UIViewController, HomeModelProtocol{
         self.loadOrigData()
         currEventData = origEventData
         
+        tableView.dataSource = self
         tableView.isHidden = true
     }
     
@@ -60,7 +58,7 @@ extension SearchView: UISearchBarDelegate{
         
         tableView.reloadData()
         
-        print(currEventData.count)
+        //print(currEventData.count)
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
