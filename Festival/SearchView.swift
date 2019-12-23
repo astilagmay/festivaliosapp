@@ -9,31 +9,29 @@
 import UIKit
 
 class SearchView: UIViewController, HomeModelProtocol{
+    func itemsDownloaded(items: NSArray) {
+        
+    }
+    
     @IBOutlet var searchViewContainer: UIView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableViewConstraint: NSLayoutConstraint!
     
     var searchController: UISearchController!
     
-    var eventItems: NSArray = NSArray()
     var origEventData: [String] = []
     var currEventData: [String] = []
     
+    var homeModel = HomeModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        homeModel.getInfo()
+        self.loadOrigData()
+        currEventData = origEventData
         
-        searchController = UISearchController(searchResultsController: nil)
-        searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        
-        searchViewContainer.addSubview(searchController.searchBar)
-        searchController.searchBar.delegate = self
-    
-        tableView.delegate = self
-        tableView.dataSource = self
-        
-        let homeModel = HomeModel()
-        homeModel.delegate = self
-        homeModel.downloadItems_Events()
+        tableView.isHidden = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,69 +40,39 @@ class SearchView: UIViewController, HomeModelProtocol{
         // Dispose of any resources that can be recreated.
     }
     
-    // functions to get the data
-    func itemsDownloaded(items: NSArray) {
-        eventItems = items
-    }
-    
     func loadOrigData(){
-        for event in eventItems{
-            origEventData.append((event as! EventModel).name! + " (" + (event as! EventModel).date! + ")")
+        for event in homeModel.EventNames{
+            origEventData.append(event)
         }
     }
-    
-    func filterData (searchTerm: String){
-        if searchTerm.count > 0{
-            currEventData = origEventData
-            let results = currEventData.filter { $0.replacingOccurrences(of: " ", with: "").lowercased().contains(searchTerm.replacingOccurrences(of: " ", with: "").lowercased()) }
-            currEventData = results
-            tableView.reloadData()
-        }
-    }
-    
-    func restoreData(){
-        currEventData = origEventData
-        tableView.reloadData()
-    }
-}
 
-extension SearchView: UISearchResultsUpdating{
-    func updateSearchResults(for searchController: UISearchController) {
-        if let searchText = searchController.searchBar.text{
-            filterData(searchTerm: searchText)
-        }
-    }
 }
 
 extension SearchView: UISearchBarDelegate{
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchController.isActive = false
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        currEventData = origEventData
         
-        if let searchText = searchController.searchBar.text{
-            filterData(searchTerm: searchText)
+        if searchText.isEmpty == false{
+            let result = origEventData.filter { $0.replacingOccurrences(of: " ", with: "").lowercased().contains(searchText.replacingOccurrences(of: " ", with: "").lowercased()) }
+            
+            currEventData = result
         }
+        
+        tableView.reloadData()
+        
+        print(currEventData.count)
     }
     
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchController.isActive = false
-        
-        if let searchText = searchController.searchBar.text, !searchText.isEmpty{
-            restoreData()
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        tableViewConstraint.constant = 0
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
         }
+        tableView.isHidden = false
     }
 }
 
 extension SearchView: UITableViewDelegate, UITableViewDataSource{
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let alertController = UIAlertController(title: "Selection", message: "Selected: \(currEventData[indexPath.row])", preferredStyle: .alert)
-        
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        
-        searchController.isActive = false
-        
-        alertController.addAction(okAction)
-        present(alertController, animated: true, completion: nil)
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return currEventData.count
