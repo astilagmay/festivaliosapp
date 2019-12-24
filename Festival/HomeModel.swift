@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol HomeModelProtocol: class {
     func itemsDownloaded(items: NSArray)
@@ -32,6 +33,7 @@ class HomeModel: NSObject, URLSessionDataDelegate{
         let phonenum: String?
     }
     
+    var EventImages = [UIImage]()
     var EventNames = [String]()
     var EventDates = [String]()
     var EventLocs = [String]()
@@ -72,6 +74,7 @@ class HomeModel: NSObject, URLSessionDataDelegate{
                         
                         
                         //get all events
+                        self.EventImages.append(UIImage(named: "TodayEvent")!)
                         self.EventNames.append(array.name ?? "N/A")
                         self.EventDates.append(array.date ?? "N/A")
                         self.EventLocs.append(array.venue ?? "N/A")

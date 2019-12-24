@@ -606,7 +606,7 @@ events! </string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lQJ-tp-jKJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1280.8" y="-613.04347826086962"/>
+            <point key="canvasLocation" x="2095" y="-328"/>
         </scene>
         <!--Search-->
         <scene sceneID="mBX-Gk-yEn">
@@ -658,11 +658,12 @@ events! </string>
                         <outlet property="searchViewContainer" destination="NsI-sY-6QG" id="tPJ-18-W0Q"/>
                         <outlet property="tableView" destination="oEO-pm-e7P" id="INs-cj-ReG"/>
                         <outlet property="tableViewConstraint" destination="IUZ-1a-MMQ" id="ZuD-gK-IFZ"/>
+                        <segue destination="WTI-GC-KnB" kind="show" identifier="showDetails" id="2gK-32-hK6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vaa-Bb-NTm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1280.8" y="59.820089955022496"/>
+            <point key="canvasLocation" x="1289" y="421"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1r4-Yf-3rw">
@@ -690,4 +691,7 @@ events! </string>
         <image name="Home" width="18" height="15.5"/>
         <image name="TodayEvent" width="164" height="108"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="2gK-32-hK6"/>
+    </inferredMetricsTieBreakers>
 </document>
