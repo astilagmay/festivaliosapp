@@ -26,9 +26,4 @@ class LocationModel: NSObject{
         self.latitude = latitude
         self.longitude = longitude
     }
-    
-    // print attributes (for debugging)
-    override var description: String{
-        return "Name: \(name) \nFull address: \(full_address) \nLatitude: \(latitude) \nLongitude: \(longitude)"
-    }
 }

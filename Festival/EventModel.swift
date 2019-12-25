@@ -34,9 +34,4 @@ class EventModel: NSObject{
         self.descr = descr
         self.phone_num = phone_num
     }
-    
-    // print attributes (for debug)
-    override var description: String{
-        return "Name: \(name) \nDate: \(date) \nVenue: \(venue) \nStart time: \(start_time) \nEnd time: \(endtime) \nPrice: \(entry_price) \nDescription: \(descr) \nPhone number: \(phone_num)"
-    }
 }
