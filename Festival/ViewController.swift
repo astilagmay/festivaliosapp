@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import UserNotifications
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -348,20 +349,49 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         getInfo()
         getLocalData()
         
+        
+        
+        //notifications
+        let notifCenter = UNUserNotificationCenter.current()
+
+        //permission
+        notifCenter.requestAuthorization(options: [.alert, .sound]) { (allowed, error) in
+            if (!allowed) {
+                print("Notifications not allowed")
+            }
+        }
+        
+        //content
+        let notifContent = UNMutableNotificationContent()
+        //notifContent.title = EVENT NAME
+        //notifContent.body = TIME
+        
+        //trigger
+        //---
+
+        
+        //request
+        //---
+
+        
+        //ADD REQUEST ON ADDBUTTON FUNC AND REMOVE REQUEST ON REMOVEBUTTON FUNC
+        
         TodayCView.frame.size = CGSize(width: TodayCView.collectionViewLayout.collectionViewContentSize.width, height: TodayCView.collectionViewLayout.collectionViewContentSize.height)
         
         // Do any additional setup after loading the view.
     }
     
+    
+    
     override func viewDidAppear(_ animated: Bool) {
         //check for current events happening
         
-        let currentName: String?
-        let currentLoc: String?
-        let currentDate: String?
-        let currentStart: String?
-        let currentEnd: String?
-        let currentPrice: String?
+        var currentName: String?
+        var currentLoc: String?
+        var currentDate: String?
+        var currentStart: String?
+        var currentEnd: String?
+        var currentPrice: String?
         var happening = 0
         
         
@@ -372,22 +402,21 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         
         if (happening == 1) {
-               DispatchQueue.main.async {
-                    self.NoEventsNow.isHidden = true
-                    self.NowEventName.text = currentName ?? "N/A"
-                    self.NowEventLoc.text = currentLoc ?? "N/A"
-                    self.NowEventDate.text = currentDate ?? "N/A"
-                    self.NowEventTime.text = (currentStart ?? "N/A") + " - " + (currentEnd ?? "N/A")
-                    self.NowEventPrice.text =  currentPrice ?? "N/A"
-                
-                    self.NoEventsNow.isHidden = true
-                    self.NowEventName.isHidden = false
-                    self.NowEventLoc.isHidden = false
-                    self.NowEventDate.isHidden = false
-                    self.NowEventTime.isHidden = false
-                    self.NowEventPrice.isHidden = false
-                    self.NowEventPriceBox.isHidden = false
-                }
+           DispatchQueue.main.async {
+                self.NoEventsNow.isHidden = true
+                self.NowEventName.text = currentName ?? "N/A"
+                self.NowEventLoc.text = currentLoc ?? "N/A"
+                self.NowEventDate.text = currentDate ?? "N/A"
+                self.NowEventTime.text = (currentStart ?? "N/A") + " - " + (currentEnd ?? "N/A")
+                self.NowEventPrice.text =  currentPrice ?? "N/A"
+            
+                self.NoEventsNow.isHidden = true
+                self.NowEventName.isHidden = false
+                self.NowEventLoc.isHidden = false
+                self.NowEventDate.isHidden = false
+                self.NowEventTime.isHidden = false
+                self.NowEventPrice.isHidden = false
+                self.NowEventPriceBox.isHidden = false
             }
         }
                         
