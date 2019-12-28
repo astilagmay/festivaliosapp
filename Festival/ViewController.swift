@@ -72,7 +72,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var NowEventLoc: UILabel!
     @IBOutlet weak var NowEventName: UILabel!
     
-    
+    //Upcoming
+    @IBOutlet weak var NoUpcomingEvents: UILabel!
     
     //get user defaults data
     func getLocalData() {
@@ -393,12 +394,46 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         var currentEnd: String?
         var currentPrice: String?
         var happening = 0
+        var noUpcoming = 1
         
         
         //------------------------------------//
         //BLOCK OF CODE FOR VARIABLE HAPPENING//
         //   SET CURRENT VARIABLES HERE TOO   //
         //____________________________________//
+        for i in 0..<EventDates.count{
+            let dateString: String = EventDates[i]
+            let startTimeString: String = EventStart[i]
+            var endTimeString: String = EventEnd[i]
+            
+            if endTimeString == "N/A"{
+                endTimeString = "11:59 PM"
+            }
+            
+            let startDateString = dateString + ", " + startTimeString
+            let endDateString = dateString + ", " + endTimeString
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MMM d, yyyy, h:mm a"
+            dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+            
+            let startDate = dateFormatter.date(from: startDateString)
+            let endDate = dateFormatter.date(from: endDateString)
+            let currDate = Date()
+            
+            if (currDate >= startDate! && currDate <= endDate!){
+                happening = 1
+                currentName = EventNames[i]
+                currentLoc = EventLocs[i]
+                currentDate = EventDates[i]
+                currentStart = EventStart[i]
+                currentEnd = EventEnd[i]
+                currentPrice = EventPrices[i]
+            }
+            if (currDate < startDate!){
+                noUpcoming = 0
+            }
+        }
         
         
         if (happening == 1) {
@@ -430,6 +465,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 self.NowEventTime.isHidden = true
                 self.NowEventPrice.isHidden = true
                 self.NowEventPriceBox.isHidden = true
+            }
+        }
+        
+        if (noUpcoming == 1){
+            DispatchQueue.main.async{
+                self.NoUpcomingEvents.isHidden = false
+            }
+        }
+        else if (noUpcoming == 0){
+            DispatchQueue.main.async{
+                self.NoUpcomingEvents.isHidden = true
             }
         }
     }

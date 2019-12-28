@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="SF UI Display Bold.otf">
+        <array key="sf-ui-display-bold-58646a511e3d9.otf">
             <string>SFUIDisplay-Bold</string>
         </array>
         <array key="sf-ui-display-medium-58646be638f96.otf">
@@ -28,7 +28,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="1462"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LeK-fT-ab1">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1462"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="321"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xHI-KA-OeE" customClass="TodayCollectionView" customModule="Festival" customModuleProvider="target">
                                                 <rect key="frame" x="12" y="418" width="350" height="975"/>
@@ -57,7 +57,7 @@
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9sh-2W-rAV">
                                                                     <rect key="frame" x="0.0" y="0.0" width="196.5" height="100"/>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NzK-fF-2hk">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NzK-fF-2hk">
                                                                     <rect key="frame" x="209.5" y="10" width="72.5" height="16"/>
                                                                     <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="13"/>
                                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -266,8 +266,8 @@ events! </string>
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </view>
-                                                                <button opaque="NO" contentMode="center" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcp-WH-0EO">
-                                                                    <rect key="frame" x="95" y="168" width="30" height="22"/>
+                                                                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcp-WH-0EO">
+                                                                    <rect key="frame" x="100" y="168" width="18" height="22"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="22" id="oRD-fF-yb9"/>
                                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="18" id="sCW-vs-YgC"/>
@@ -281,7 +281,7 @@ events! </string>
                                                         </view>
                                                         <color key="backgroundColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstItem="kcp-WH-0EO" firstAttribute="leading" secondItem="g1c-MJ-H6C" secondAttribute="leadingMargin" constant="87" id="0TG-u7-oHU"/>
+                                                            <constraint firstItem="kcp-WH-0EO" firstAttribute="leading" secondItem="g1c-MJ-H6C" secondAttribute="leadingMargin" constant="92" id="0TG-u7-oHU"/>
                                                             <constraint firstItem="r6w-ok-tpN" firstAttribute="top" secondItem="B6N-1M-DAj" secondAttribute="bottom" id="2rv-ag-Uje"/>
                                                             <constraint firstItem="wXg-p0-3So" firstAttribute="leading" secondItem="g1c-MJ-H6C" secondAttribute="leading" id="4SQ-Zy-kOe"/>
                                                             <constraint firstItem="PvG-Jb-FHd" firstAttribute="leading" secondItem="g1c-MJ-H6C" secondAttribute="leading" constant="7" id="8Md-ez-Zao"/>
@@ -427,8 +427,8 @@ events! </string>
                                                 <color key="textColor" red="0.48230850696563721" green="0.48238134384155273" blue="0.4822925329208374" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TODAY AND UPCOMING EVENTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFU-A6-pil">
-                                                <rect key="frame" x="12" y="396" width="350" height="16"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TODAY AND UPCOMING EVENTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFU-A6-pil">
+                                                <rect key="frame" x="12" y="396" width="192.5" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="16" id="MIq-SH-x9P"/>
                                                 </constraints>
@@ -448,7 +448,7 @@ events! </string>
                                             <constraint firstItem="xHI-KA-OeE" firstAttribute="leading" secondItem="LeK-fT-ab1" secondAttribute="leading" constant="12" id="1yw-ZY-0uh"/>
                                             <constraint firstItem="Jew-p7-ZWm" firstAttribute="trailing" secondItem="xHI-KA-OeE" secondAttribute="trailing" id="7z0-lp-CE0"/>
                                             <constraint firstItem="xHI-KA-OeE" firstAttribute="top" secondItem="LeK-fT-ab1" secondAttribute="top" constant="418" id="FR9-ln-uLT"/>
-                                            <constraint firstAttribute="bottom" secondItem="xHI-KA-OeE" secondAttribute="bottom" constant="69.000000000000227" id="Ig4-Fl-xWN"/>
+                                            <constraint firstAttribute="bottom" secondItem="xHI-KA-OeE" secondAttribute="bottom" constant="-1072" id="Ig4-Fl-xWN"/>
                                             <constraint firstItem="Jew-p7-ZWm" firstAttribute="leading" secondItem="0aT-2Q-K4i" secondAttribute="leading" id="JDn-37-VkW"/>
                                             <constraint firstItem="Tto-mh-Jky" firstAttribute="leading" secondItem="LeK-fT-ab1" secondAttribute="leading" constant="12" id="Jyk-pm-cpA"/>
                                             <constraint firstItem="xHI-KA-OeE" firstAttribute="top" secondItem="IFU-A6-pil" secondAttribute="bottom" constant="6" id="MBj-Yf-mrr"/>
@@ -457,7 +457,7 @@ events! </string>
                                             <constraint firstItem="Tto-mh-Jky" firstAttribute="top" secondItem="LeK-fT-ab1" secondAttribute="top" constant="23" id="XfL-ad-1o3"/>
                                             <constraint firstItem="IFU-A6-pil" firstAttribute="top" secondItem="Jew-p7-ZWm" secondAttribute="bottom" constant="18" id="ZvZ-WZ-O4l"/>
                                             <constraint firstItem="4XH-7d-WGk" firstAttribute="leading" secondItem="LeK-fT-ab1" secondAttribute="leading" constant="12" id="acE-JE-voj"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="598" id="eYa-Kq-Gyi"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="214" id="eYa-Kq-Gyi"/>
                                             <constraint firstItem="0aT-2Q-K4i" firstAttribute="leading" secondItem="LeK-fT-ab1" secondAttribute="leading" constant="12" id="i59-xQ-KQq"/>
                                             <constraint firstItem="4XH-7d-WGk" firstAttribute="top" secondItem="Tto-mh-Jky" secondAttribute="bottom" constant="4" id="lVk-tE-hxJ"/>
                                             <constraint firstAttribute="trailing" secondItem="xHI-KA-OeE" secondAttribute="trailing" constant="13" id="nVc-4R-4N1"/>
@@ -474,8 +474,8 @@ events! </string>
                                     <constraint firstItem="LeK-fT-ab1" firstAttribute="leading" secondItem="eHb-TE-TO1" secondAttribute="leading" id="3Q5-U4-Q2C"/>
                                     <constraint firstAttribute="trailing" secondItem="LeK-fT-ab1" secondAttribute="trailing" id="7Wm-di-DRN"/>
                                     <constraint firstItem="LeK-fT-ab1" firstAttribute="top" secondItem="eHb-TE-TO1" secondAttribute="top" id="HOs-A4-IQv"/>
-                                    <constraint firstAttribute="bottom" secondItem="LeK-fT-ab1" secondAttribute="bottom" id="Wal-na-hGJ"/>
-                                    <constraint firstItem="LeK-fT-ab1" firstAttribute="centerY" secondItem="eHb-TE-TO1" secondAttribute="centerY" id="yVM-f6-Mpw"/>
+                                    <constraint firstAttribute="bottom" secondItem="LeK-fT-ab1" secondAttribute="bottom" constant="1141" id="Wal-na-hGJ"/>
+                                    <constraint firstItem="LeK-fT-ab1" firstAttribute="centerY" secondItem="eHb-TE-TO1" secondAttribute="centerY" constant="-570.5" id="yVM-f6-Mpw"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -504,7 +504,8 @@ events! </string>
                     <size key="freeformSize" width="375" height="1500"/>
                     <connections>
                         <outlet property="NoEventsNow" destination="DRP-Oe-g0H" id="ukr-Zy-bLt"/>
-                        <outlet property="NoUpcoming" destination="mVK-eE-nHP" id="rEn-Nb-4k5"/>
+                        <outlet property="NoUpcoming" destination="Cdb-cs-SDX" id="ijW-bJ-tUC"/>
+                        <outlet property="NoUpcomingEvents" destination="Cdb-cs-SDX" id="hgr-wF-GDQ"/>
                         <outlet property="NowEventDate" destination="o2h-FG-YdK" id="sVp-DS-UYb"/>
                         <outlet property="NowEventLoc" destination="D7J-4h-YmM" id="mHY-Nl-unA"/>
                         <outlet property="NowEventName" destination="SOv-3G-yzw" id="Yv4-eI-pev"/>
