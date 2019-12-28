@@ -12,9 +12,15 @@ import UserNotifications
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    
+    // View Components
     @IBOutlet weak var UpcomingCView: UICollectionView!
     @IBOutlet weak var TodayCView: UICollectionView!
+    @IBOutlet weak var ScrollView: UIScrollView!
+    @IBOutlet weak var HappeningCView: UIView!
+    @IBOutlet weak var ContentView: UIView!
+    @IBOutlet weak var HappeningLabel: UILabel!
+    @IBOutlet weak var TodayLabel: UILabel!
+    @IBOutlet weak var UpcomingLabel: UILabel!
     
     //JSON structs
     struct EventInfo: Decodable {
@@ -346,11 +352,24 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        ScrollView.delaysContentTouches = true
+        ScrollView.canCancelContentTouches = true
+        ScrollView.isUserInteractionEnabled = true
+        ScrollView.isExclusiveTouch = true
         
         getInfo()
         getLocalData()
         
+        /*
+          ////////////////////
+        //   For debugging   //
+          ///////////////////
+        */
+ 
+        ScrollView.addSubview(UpcomingCView)
         
+        
+        print(ContentView.isUserInteractionEnabled)
         
         //notifications
         let notifCenter = UNUserNotificationCenter.current()
