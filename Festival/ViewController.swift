@@ -366,10 +366,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
           ///////////////////
         */
  
-        ScrollView.addSubview(UpcomingCView)
-        
-        
-        print(ContentView.isUserInteractionEnabled)
+        //ScrollView.addSubview(UpcomingCView)
         
         //notifications
         let notifCenter = UNUserNotificationCenter.current()
