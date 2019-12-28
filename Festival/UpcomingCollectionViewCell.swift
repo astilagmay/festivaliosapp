@@ -16,4 +16,5 @@ class UpcomingCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var EventLoc: UILabel!
     @IBOutlet weak var EventDate: UILabel!
     @IBOutlet weak var EventTime: UILabel!
+    @IBOutlet weak var RemoveButton: UIButton!
 }

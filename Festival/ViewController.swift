@@ -15,7 +15,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var UpcomingCView: UICollectionView!
     @IBOutlet weak var TodayCView: UICollectionView!
     
-    
+    //JSON structs
     struct EventInfo: Decodable {
         let data: [EventStruct]
     }
@@ -71,6 +71,49 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var NowEventLoc: UILabel!
     @IBOutlet weak var NowEventName: UILabel!
     
+    
+    
+    //get user defaults data
+    func getLocalData() {
+        
+        //get local data
+        let defaults = UserDefaults.standard
+        let localNames = defaults.stringArray(forKey: "LocalNames") ?? [String]()
+        let localDates = defaults.stringArray(forKey: "LocalDates") ?? [String]()
+        let localLocs = defaults.stringArray(forKey: "LocalLocs") ?? [String]()
+        let localStart = defaults.stringArray(forKey: "LocalStart") ?? [String]()
+        let localEnd = defaults.stringArray(forKey: "LocalEnd") ?? [String]()
+        let localPrices = defaults.stringArray(forKey: "LocalPrices") ?? [String]()
+    
+        //assign to upcoming arrays
+        MyEventNames = localNames
+        MyEventDates = localDates
+        MyEventLocs = localLocs
+        MyEventStart = localStart
+        MyEventEnd = localEnd
+        MyEventPrices = localPrices
+        
+        //add default image
+        for _ in MyEventNames {
+            self.MyEventImages.append(UIImage(named: "TodayEvent")!)
+        }
+        
+        //check if no upcoming
+        if (MyEventNames.count == 0) {
+            NoUpcoming.isHidden = false
+        }
+
+         
+        else {
+            NoUpcoming.isHidden = true
+        }
+       
+        
+        
+    }
+    
+    
+    //GET request and parse to arrays
     func getInfo() {
         
         let semaphore = DispatchSemaphore (value: 0)
@@ -90,25 +133,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             do {
                 let parsedData = try decoder.decode(EventInfo.self, from: data)
                 
-                let date = Date()
-                let formatter = DateFormatter()
-                
-                formatter.dateFormat = "yyyy-MM-dd"
-                
-                let currentDate = formatter.string(from: date)
-                
-                formatter.dateFormat = "HH"
-                let currentHour = Int(formatter.string(from: Date()))
-
-//                print(currentHour!)
-                
-                var happening = 0;
-
+                //dictionary keys
+                var i = 0;
                 
                 //loop through whole array
                 for array in parsedData.data {
-                    
-                    
                     
                     //get all events
                     self.EventImages.append(UIImage(named: "TodayEvent")!)
@@ -120,67 +149,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                     self.EventPrices.append(array.entryprice ?? "N/A")
                     self.EventDesc.append(array.descr ?? "N/A")
                     
-                    //get start hour
-                    var splitTime = array.starttime!.split(separator: ":")
-                    var startHour = Int(splitTime[0])
-                    
-                    if array.starttime!.contains("PM") {
-                        startHour = startHour! + 12
-                    }
-                    
-                    //get end hour
-                    splitTime = array.endtime!.split(separator: ":")
-                    var endHour = Int(splitTime[0])
-                    
-                    if array.endtime!.contains("PM") {
-                        endHour = endHour! + 12
-                    }
-                    
-                    
-                    //check for events happening right now
-                    if (array.date == currentDate) {
-                        if (currentHour! >= startHour! && currentHour! <= endHour!) {
-                            
-                            happening = 1
-                            
-    //                        print(currentHour! - eventHour!)
-
-                           DispatchQueue.main.async {
-                                self.NoEventsNow.isHidden = true
-                                self.NowEventName.text = array.name ?? "N/A"
-                                self.NowEventLoc.text = array.venue ?? "N/A"
-                                self.NowEventDate.text = array.date ?? "N/A"
-                                self.NowEventTime.text = (array.starttime ?? "N/A") + " - " + (array.endtime ?? "N/A")
-                                self.NowEventPrice.text =  array.entryprice ?? "N/A"
-                            
-                                self.NoEventsNow.isHidden = true
-                                self.NowEventName.isHidden = false
-                                self.NowEventLoc.isHidden = false
-                                self.NowEventDate.isHidden = false
-                                self.NowEventTime.isHidden = false
-                                self.NowEventPrice.isHidden = false
-                                self.NowEventPriceBox.isHidden = false
-                            }
-                        }
-                    }
-                    
-                    //no events happening right now
-                    if (happening == 0) {
-                        DispatchQueue.main.async {
-                            self.NoEventsNow.isHidden = false
-                            self.NowEventName.isHidden = true
-                            self.NowEventLoc.isHidden = true
-                            self.NowEventDate.isHidden = true
-                            self.NowEventTime.isHidden = true
-                            self.NowEventPrice.isHidden = true
-                            self.NowEventPriceBox.isHidden = true
-                        }
-                    }
+                    self.showAddButton[i] = 1
+                    i = i + 1
                     
                 }
-                
-                
-
                 
                 //print(self.EventNames)
                 
@@ -188,45 +160,22 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 print(error)
             }
             
-            
-            
-            
 //          print(String(data: data, encoding: .utf8)!)
           semaphore.signal()
         }
 
         task.resume()
         semaphore.wait()
-        
-        
     }
         
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        
-        
-        if (collectionView == TodayCView) {
-//
-//            if (EventNames.count == 0) {
-//                return 1
-//            }
-            
-            return EventNames.count
-        }
-        
-        else {
-//            
-//            if (MyEventNames.count == 0) {
-//                return 1
-//            }
-//            
-            return MyEventNames.count
-        }
-    }
+    var showAddButton = [Int:Int]()
+    
+    
+    //add event button
     @IBAction func AddButton(_ sender: UIButton) {
-        print(sender.tag)
         
+        //add to upcoming arrays
         MyEventImages.append(EventImages[sender.tag])
         MyEventNames.append(EventNames[sender.tag])
         MyEventDates.append(EventDates[sender.tag])
@@ -235,15 +184,41 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         MyEventEnd.append(EventEnd[sender.tag])
         MyEventPrices.append(EventPrices[sender.tag])
         
-        NoUpcoming.isHidden = true
+        
+        //hide add button
+        showAddButton[sender.tag] = 0
         
         
+        //check if no upcoming
+        if (MyEventNames.count == 0) {
+            NoUpcoming.isHidden = false
+        }
+        
+            
+        else {
+            NoUpcoming.isHidden = true
+        }
+        
+        //save to defaults
+        let defaults = UserDefaults.standard
+        defaults.set(MyEventNames, forKey: "LocalNames")
+        defaults.set(MyEventDates, forKey: "LocalDates")
+        defaults.set(MyEventLocs, forKey: "LocalLocs")
+        defaults.set(MyEventStart, forKey: "LocalStart")
+        defaults.set(MyEventEnd, forKey: "LocalEnd")
+        defaults.set(MyEventPrices, forKey: "LocalPrices")
+        
+        //reload data
         self.UpcomingCView.reloadData()
+        self.TodayCView.reloadData()
+        
         
     }
     
+    //segue to detailed info view
     @IBAction func SegueButton(_ sender: UIButton) {
         
+        //set segue variables
         passedName = EventNames[sender.tag]
         passedLoc = EventLocs[sender.tag]
         passedDesc = EventDesc[sender.tag]
@@ -256,35 +231,96 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
     }
     
+    //remove event
+    @IBAction func RemoveButton(_ sender: UIButton) {
+        
+        //remove in upcoming arrays
+        MyEventImages.remove(at: sender.tag)
+        MyEventNames.remove(at: sender.tag)
+        MyEventDates.remove(at: sender.tag)
+        MyEventLocs.remove(at: sender.tag)
+        MyEventStart.remove(at: sender.tag)
+        MyEventEnd.remove(at: sender.tag)
+        MyEventPrices.remove(at: sender.tag)
+        
+        
+        //save to defaults
+        let defaults = UserDefaults.standard
+        defaults.set(MyEventNames, forKey: "LocalNames")
+        defaults.set(MyEventDates, forKey: "LocalDates")
+        defaults.set(MyEventLocs, forKey: "LocalLocs")
+        defaults.set(MyEventStart, forKey: "LocalStart")
+        defaults.set(MyEventEnd, forKey: "LocalEnd")
+        defaults.set(MyEventPrices, forKey: "LocalPrices")
+        
+        
+        //check if no upcoming
+        if (MyEventNames.count == 0) {
+          NoUpcoming.isHidden = false
+        }
+
+          
+        else {
+          NoUpcoming.isHidden = true
+        }
+        
+        //show add button
+        showAddButton[sender.tag] = 1
+        
+        //reload data
+        self.UpcomingCView.reloadData()
+        self.TodayCView.reloadData()
+    }
     
+    
+    //set number of cells in collection views
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        if (collectionView == TodayCView) {
+            return EventNames.count
+        }
+        
+        else {
+            return MyEventNames.count
+        }
+    }
+    
+    
+    
+    //initialize collection view cells
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        //events
         if (collectionView == TodayCView) {
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TodayCollectionViewCell", for: indexPath) as! TodayCollectionViewCell
             
-                cell.EventImage.image = EventImages[indexPath.row]
-                cell.EventPrice.text = EventPrices[indexPath.row]
-                cell.EventName.text = EventNames[indexPath.row]
-                cell.EventLocation.text = EventLocs[indexPath.row]
-                cell.EventDate.text = EventDates[indexPath.row]
-                cell.EventTime.text = EventStart[indexPath.row] + " - " + EventEnd[indexPath.row]
-                cell.EventDescription.text = EventDesc[indexPath.row]
-                cell.NoEvents.isHidden = true
+            cell.EventImage.image = EventImages[indexPath.row]
+            cell.EventPrice.text = EventPrices[indexPath.row]
+            cell.EventName.text = EventNames[indexPath.row]
+            cell.EventLocation.text = EventLocs[indexPath.row]
+            cell.EventDate.text = EventDates[indexPath.row]
+            cell.EventTime.text = EventStart[indexPath.row] + " - " + EventEnd[indexPath.row]
+            cell.EventDescription.text = EventDesc[indexPath.row]
+            cell.NoEvents.isHidden = true
+        
+            if (showAddButton[indexPath.row] == 1) {
+                    cell.AddButton.isHidden = false
+            }
+            else {
+                cell.AddButton.isHidden = true
+            }
+        
+            cell.AddButton.tag = indexPath.row
+            cell.AddButton.addTarget(self, action: #selector(self.AddButton), for: .touchUpInside)
+        
+            cell.SegueButton.tag = indexPath.row
+            cell.SegueButton.addTarget(self, action: #selector(self.SegueButton), for: .touchUpInside)
             
-                cell.AddButton.tag = indexPath.row
-                cell.AddButton.addTarget(self,
-                                         action: #selector(self.AddButton),
-                    for: .touchUpInside)
-            
-                cell.SegueButton.tag = indexPath.row
-                cell.SegueButton.addTarget(self,
-                                     action: #selector(self.SegueButton),
-                for: .touchUpInside)
-                
-                return cell
+            return cell
         }
         
+        //upcoming events
         else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UpcomingCollectionViewCell", for: indexPath) as! UpcomingCollectionViewCell
             
@@ -295,10 +331,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             cell.EventDate.text = MyEventDates[indexPath.row]
             cell.EventTime.text = MyEventStart[indexPath.row] + " - " + EventEnd[indexPath.row]
             
+            cell.RemoveButton.tag = indexPath.row
+            cell.RemoveButton.addTarget(self, action: #selector(self.RemoveButton), for: .touchUpInside)
+        
             return cell
             
         }
-               
     }
     
 
@@ -308,15 +346,65 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         
         getInfo()
+        getLocalData()
         
-
-
-        
-        TodayCView.frame.size = CGSize(width: TodayCView.collectionViewLayout.collectionViewContentSize.width,height: TodayCView.collectionViewLayout.collectionViewContentSize.height)
+        TodayCView.frame.size = CGSize(width: TodayCView.collectionViewLayout.collectionViewContentSize.width, height: TodayCView.collectionViewLayout.collectionViewContentSize.height)
         
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        //check for current events happening
+        
+        let currentName: String?
+        let currentLoc: String?
+        let currentDate: String?
+        let currentStart: String?
+        let currentEnd: String?
+        let currentPrice: String?
+        var happening = 0
+        
+        
+        //------------------------------------//
+        //BLOCK OF CODE FOR VARIABLE HAPPENING//
+        //   SET CURRENT VARIABLES HERE TOO   //
+        //____________________________________//
+        
+        
+        if (happening == 1) {
+               DispatchQueue.main.async {
+                    self.NoEventsNow.isHidden = true
+                    self.NowEventName.text = currentName ?? "N/A"
+                    self.NowEventLoc.text = currentLoc ?? "N/A"
+                    self.NowEventDate.text = currentDate ?? "N/A"
+                    self.NowEventTime.text = (currentStart ?? "N/A") + " - " + (currentEnd ?? "N/A")
+                    self.NowEventPrice.text =  currentPrice ?? "N/A"
+                
+                    self.NoEventsNow.isHidden = true
+                    self.NowEventName.isHidden = false
+                    self.NowEventLoc.isHidden = false
+                    self.NowEventDate.isHidden = false
+                    self.NowEventTime.isHidden = false
+                    self.NowEventPrice.isHidden = false
+                    self.NowEventPriceBox.isHidden = false
+                }
+            }
+        }
+                        
+        //no events happening right now
+        else if (happening == 0) {
+            DispatchQueue.main.async {
+                self.NoEventsNow.isHidden = false
+                self.NowEventName.isHidden = true
+                self.NowEventLoc.isHidden = true
+                self.NowEventDate.isHidden = true
+                self.NowEventTime.isHidden = true
+                self.NowEventPrice.isHidden = true
+                self.NowEventPriceBox.isHidden = true
+            }
+        }
+    }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetails" {
@@ -331,6 +419,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             destvc.passedImage = passedImage
         }
     }
+    
     
     @IBAction func searchButtonAction(_ sender: UIBarButtonItem) {
         // open search view to let the user search for the event

@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="sf-ui-display-bold-58646a511e3d9.otf">
+        <array key="SF UI Display Bold.otf">
             <string>SFUIDisplay-Bold</string>
         </array>
         <array key="sf-ui-display-medium-58646be638f96.otf">
@@ -266,10 +266,22 @@ events! </string>
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </view>
+                                                                <button opaque="NO" contentMode="center" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcp-WH-0EO">
+                                                                    <rect key="frame" x="95" y="168" width="30" height="22"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="22" id="oRD-fF-yb9"/>
+                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="18" id="sCW-vs-YgC"/>
+                                                                    </constraints>
+                                                                    <state key="normal" image="RemoveEvent"/>
+                                                                    <connections>
+                                                                        <action selector="RemoveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wVN-c5-x6w"/>
+                                                                    </connections>
+                                                                </button>
                                                             </subviews>
                                                         </view>
                                                         <color key="backgroundColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
+                                                            <constraint firstItem="kcp-WH-0EO" firstAttribute="leading" secondItem="g1c-MJ-H6C" secondAttribute="leadingMargin" constant="87" id="0TG-u7-oHU"/>
                                                             <constraint firstItem="r6w-ok-tpN" firstAttribute="top" secondItem="B6N-1M-DAj" secondAttribute="bottom" id="2rv-ag-Uje"/>
                                                             <constraint firstItem="wXg-p0-3So" firstAttribute="leading" secondItem="g1c-MJ-H6C" secondAttribute="leading" id="4SQ-Zy-kOe"/>
                                                             <constraint firstItem="PvG-Jb-FHd" firstAttribute="leading" secondItem="g1c-MJ-H6C" secondAttribute="leading" constant="7" id="8Md-ez-Zao"/>
@@ -284,6 +296,7 @@ events! </string>
                                                             <constraint firstAttribute="trailingMargin" secondItem="dgr-Wo-dfa" secondAttribute="trailing" constant="2" id="acz-CI-dOc"/>
                                                             <constraint firstItem="wXg-p0-3So" firstAttribute="top" secondItem="g1c-MJ-H6C" secondAttribute="top" id="eIT-PW-kcl"/>
                                                             <constraint firstItem="dgr-Wo-dfa" firstAttribute="top" secondItem="wXg-p0-3So" secondAttribute="bottom" constant="5" id="er5-1C-J6u"/>
+                                                            <constraint firstItem="kcp-WH-0EO" firstAttribute="firstBaseline" secondItem="B6N-1M-DAj" secondAttribute="baseline" constant="-1" id="i5H-lC-URN"/>
                                                             <constraint firstItem="dgr-Wo-dfa" firstAttribute="top" secondItem="PvG-Jb-FHd" secondAttribute="bottom" constant="12" id="iCH-dr-1hU"/>
                                                             <constraint firstAttribute="trailing" secondItem="PvG-Jb-FHd" secondAttribute="trailing" constant="68" id="im8-de-6y0"/>
                                                             <constraint firstItem="bAx-41-I1D" firstAttribute="top" secondItem="wXg-p0-3So" secondAttribute="bottom" constant="20" id="o3N-wx-4pw"/>
@@ -302,6 +315,7 @@ events! </string>
                                                             <outlet property="EventName" destination="dgr-Wo-dfa" id="s8p-xm-snX"/>
                                                             <outlet property="EventPrice" destination="Tby-eX-9SE" id="2Lk-k8-m8N"/>
                                                             <outlet property="EventTime" destination="r6w-ok-tpN" id="fJD-25-DC7"/>
+                                                            <outlet property="RemoveButton" destination="kcp-WH-0EO" id="ArY-U5-1Fe"/>
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>
@@ -413,8 +427,8 @@ events! </string>
                                                 <color key="textColor" red="0.48230850696563721" green="0.48238134384155273" blue="0.4822925329208374" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TODAY AND UPCOMING EVENTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFU-A6-pil">
-                                                <rect key="frame" x="12" y="396" width="192.5" height="16"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TODAY AND UPCOMING EVENTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFU-A6-pil">
+                                                <rect key="frame" x="12" y="396" width="350" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="16" id="MIq-SH-x9P"/>
                                                 </constraints>
@@ -451,7 +465,7 @@ events! </string>
                                             <constraint firstAttribute="trailing" secondItem="4XH-7d-WGk" secondAttribute="trailing" constant="12" id="s03-ua-zSp"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Tto-mh-Jky" secondAttribute="trailing" constant="217" id="wAT-jA-LyV"/>
                                             <constraint firstItem="0aT-2Q-K4i" firstAttribute="top" secondItem="4XH-7d-WGk" secondAttribute="bottom" constant="20" id="xQA-au-3FQ"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IFU-A6-pil" secondAttribute="trailing" constant="162.5" id="zMv-bf-p2v"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IFU-A6-pil" secondAttribute="trailing" constant="13" id="zMv-bf-p2v"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -717,6 +731,7 @@ events! </string>
         <image name="AddEvent" width="15" height="15"/>
         <image name="CurrentEvent" width="351" height="234"/>
         <image name="Home" width="18" height="15.5"/>
+        <image name="RemoveEvent" width="15" height="15"/>
         <image name="TodayEvent" width="164" height="108"/>
     </resources>
     <inferredMetricsTieBreakers>
