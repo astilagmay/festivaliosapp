@@ -19,6 +19,10 @@
 		0AA4B2342377E3D8007ADB92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA4B2322377E3D8007ADB92 /* LaunchScreen.storyboard */; };
 		0AA4B23F2377E3D8007ADB92 /* FestivalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4B23E2377E3D8007ADB92 /* FestivalTests.swift */; };
 		0AA4B24A2377E3D9007ADB92 /* FestivalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4B2492377E3D9007ADB92 /* FestivalUITests.swift */; };
+		0D324C1623B866C400882BE8 /* sub120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D324C1223B866C100882BE8 /* sub120x120.png */; };
+		0D324C1B23B8675E00882BE8 /* sub.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D324C1A23B8675D00882BE8 /* sub.png */; };
+		0D324C1E23B867B300882BE8 /* sub167x167.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D324C1C23B867B300882BE8 /* sub167x167.png */; };
+		0D324C1F23B867B300882BE8 /* sub152x152.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D324C1D23B867B300882BE8 /* sub152x152.png */; };
 		0D7C7AF123B03DE600F7CE0C /* sf-ui-display-light-58646b33e0551.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0D7C7AE923B03DE500F7CE0C /* sf-ui-display-light-58646b33e0551.otf */; };
 		0D7C7AF223B03DE600F7CE0C /* sf-ui-display-thin-58646e9b26e8b.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0D7C7AEA23B03DE500F7CE0C /* sf-ui-display-thin-58646e9b26e8b.otf */; };
 		0D7C7AF323B03DE600F7CE0C /* sf-ui-display-medium-58646be638f96.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0D7C7AEB23B03DE500F7CE0C /* sf-ui-display-medium-58646be638f96.otf */; };
@@ -77,6 +81,11 @@
 		0AA4B2452377E3D9007ADB92 /* FestivalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FestivalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AA4B2492377E3D9007ADB92 /* FestivalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalUITests.swift; sourceTree = "<group>"; };
 		0AA4B24B2377E3D9007ADB92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D324C1123B84B9400882BE8 /* Festival.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Festival.entitlements; sourceTree = "<group>"; };
+		0D324C1223B866C100882BE8 /* sub120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sub120x120.png; path = ../../sub120x120.png; sourceTree = "<group>"; };
+		0D324C1A23B8675D00882BE8 /* sub.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sub.png; path = ../../sub.png; sourceTree = "<group>"; };
+		0D324C1C23B867B300882BE8 /* sub167x167.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sub167x167.png; path = ../../sub167x167.png; sourceTree = "<group>"; };
+		0D324C1D23B867B300882BE8 /* sub152x152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sub152x152.png; path = ../../sub152x152.png; sourceTree = "<group>"; };
 		0D7C7AE823B03DC400F7CE0C /* ZingRustDemo-Base.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ZingRustDemo-Base.otf"; path = "Festival/Fonts/ZingRustDemo-Base.otf"; sourceTree = "<group>"; };
 		0D7C7AE923B03DE500F7CE0C /* sf-ui-display-light-58646b33e0551.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "sf-ui-display-light-58646b33e0551.otf"; path = "Festival/Fonts/sf-ui-display-light-58646b33e0551.otf"; sourceTree = "<group>"; };
 		0D7C7AEA23B03DE500F7CE0C /* sf-ui-display-thin-58646e9b26e8b.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "sf-ui-display-thin-58646e9b26e8b.otf"; path = "Festival/Fonts/sf-ui-display-thin-58646e9b26e8b.otf"; sourceTree = "<group>"; };
@@ -165,6 +174,7 @@
 		0AA4B2282377E3D4007ADB92 /* Festival */ = {
 			isa = PBXGroup;
 			children = (
+				0D324C1123B84B9400882BE8 /* Festival.entitlements */,
 				0A9C7CB523A6816D007FE279 /* Fonts */,
 				0AA4B22D2377E3D4007ADB92 /* Main.storyboard */,
 				0AA4B2292377E3D4007ADB92 /* AppDelegate.swift */,
@@ -176,6 +186,10 @@
 				0AA4B2302377E3D8007ADB92 /* Assets.xcassets */,
 				0AA4B2322377E3D8007ADB92 /* LaunchScreen.storyboard */,
 				0AA4B2352377E3D8007ADB92 /* Info.plist */,
+				0D324C1D23B867B300882BE8 /* sub152x152.png */,
+				0D324C1C23B867B300882BE8 /* sub167x167.png */,
+				0D324C1A23B8675D00882BE8 /* sub.png */,
+				0D324C1223B866C100882BE8 /* sub120x120.png */,
 				CE67151223AAC3F0005E17F3 /* HomeModel.swift */,
 				CE67151423AAC441005E17F3 /* EventModel.swift */,
 				CE67151623AAC743005E17F3 /* LocationModel.swift */,
@@ -309,7 +323,10 @@
 				0D7C7AF123B03DE600F7CE0C /* sf-ui-display-light-58646b33e0551.otf in Resources */,
 				0D7C7AF223B03DE600F7CE0C /* sf-ui-display-thin-58646e9b26e8b.otf in Resources */,
 				0D7C7AF323B03DE600F7CE0C /* sf-ui-display-medium-58646be638f96.otf in Resources */,
+				0D324C1F23B867B300882BE8 /* sub152x152.png in Resources */,
+				0D324C1E23B867B300882BE8 /* sub167x167.png in Resources */,
 				0D7C7AF423B03DE600F7CE0C /* sf-ui-display-semibold-58646eddcae92.otf in Resources */,
+				0D324C1B23B8675E00882BE8 /* sub.png in Resources */,
 				0D7C7AF523B03DE600F7CE0C /* sf-ui-display-heavy-586470160b9e5.otf in Resources */,
 				0D7C7AF623B03DE600F7CE0C /* sf-ui-display-bold-58646a511e3d9.otf in Resources */,
 				0D7C7AF723B03DE600F7CE0C /* sf-ui-display-black-58646a6b80d5a.otf in Resources */,
@@ -318,6 +335,7 @@
 				0AA4B2342377E3D8007ADB92 /* LaunchScreen.storyboard in Resources */,
 				0AA4B2312377E3D8007ADB92 /* Assets.xcassets in Resources */,
 				0AA4B22F2377E3D4007ADB92 /* Main.storyboard in Resources */,
+				0D324C1623B866C400882BE8 /* sub120x120.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,15 +543,17 @@
 		0AA4B24F2377E3D9007ADB92 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_ENTITLEMENTS = Festival/Festival.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R8Y4YU5M85;
+				DEVELOPMENT_TEAM = AUZVGA3AU5;
 				INFOPLIST_FILE = Festival/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = UPCircuit.Festival;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.UPCircuit.Festival;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -543,15 +563,17 @@
 		0AA4B2502377E3D9007ADB92 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_ENTITLEMENTS = Festival/Festival.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R8Y4YU5M85;
+				DEVELOPMENT_TEAM = AUZVGA3AU5;
 				INFOPLIST_FILE = Festival/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = UPCircuit.Festival;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.UPCircuit.Festival;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
