@@ -13,6 +13,7 @@ import UserNotifications
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     // View Components
+    @IBOutlet var superView: UIView!
     @IBOutlet weak var UpcomingCView: UICollectionView!
     @IBOutlet weak var TodayCView: UICollectionView!
     @IBOutlet weak var ScrollView: UIScrollView!
@@ -346,7 +347,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
         }
     }
-    
 
 
     override func viewDidLoad() {
@@ -360,13 +360,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         getInfo()
         getLocalData()
         
-        /*
-          ////////////////////
-        //   For debugging   //
-          ///////////////////
-        */
- 
-        //ScrollView.addSubview(UpcomingCView)
+        ScrollView.addSubview(TodayCView)
         
         //notifications
         let notifCenter = UNUserNotificationCenter.current()
