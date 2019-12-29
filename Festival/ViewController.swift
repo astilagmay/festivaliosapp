@@ -207,8 +207,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let eventDate = EventDates[sender.tag]
         let eventTime = EventStart[sender.tag]
         
+        // get event date and time from string
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM d, yyyy, h:mm a"
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        
+        let dateString = eventDate + ", " + eventTime
+        let evDate = dateFormatter.date(from: dateString)
+        
+        
         //timeInterval is the difference between current date and event date(IN SECONDS)
-        timeInterval = 1
+        let timeInterval = (evDate?.timeIntervalSinceNow)!
         
         let date = Date(timeIntervalSinceNow: timeInterval)
         let triggerDate = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
