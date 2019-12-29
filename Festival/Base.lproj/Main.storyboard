@@ -511,7 +511,7 @@ events! </string>
                         <outlet property="HappeningCView" destination="4XH-7d-WGk" id="vlK-QX-Cnc"/>
                         <outlet property="HappeningLabel" destination="Tto-mh-Jky" id="34q-Mm-oI6"/>
                         <outlet property="NoEventsNow" destination="DRP-Oe-g0H" id="ukr-Zy-bLt"/>
-                        <outlet property="NoUpcoming" destination="Cdb-cs-SDX" id="ijW-bJ-tUC"/>
+                        <outlet property="NoUpcoming" destination="mVK-eE-nHP" id="C4D-Pw-dCA"/>
                         <outlet property="NoUpcomingEvents" destination="Cdb-cs-SDX" id="hgr-wF-GDQ"/>
                         <outlet property="NowEventDate" destination="o2h-FG-YdK" id="sVp-DS-UYb"/>
                         <outlet property="NowEventLoc" destination="D7J-4h-YmM" id="mHY-Nl-unA"/>
