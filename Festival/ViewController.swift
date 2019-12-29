@@ -194,6 +194,39 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         MyEventPrices.append(EventPrices[sender.tag])
         
         
+        //set notification
+        let notifCenter = UNUserNotificationCenter.current()
+
+        //content
+        let notifContent = UNMutableNotificationContent()
+        notifContent.title = EventNames[sender.tag]
+        notifContent.body = EventStart[sender.tag] + " - " + EventEnd[sender.tag]
+        
+        //trigger
+        //convert to seconds
+        let eventDate = EventDates[sender.tag]
+        let eventTime = EventStart[sender.tag]
+        
+        //timeInterval is the difference between current date and event date(IN SECONDS)
+        timeInterval = 1
+        
+        let date = Date(timeIntervalSinceNow: timeInterval)
+        let triggerDate = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+
+        //request
+        let identifier = "EventNotif" + String(sender.tag)
+        let request = UNNotificationRequest(identifier: identifier, content: notifContent, trigger: trigger)
+
+        notifCenter.add(request, withCompletionHandler: { (error) in
+            if let error = error {
+                print(error)
+            }
+        })
+
+        
+        
         //hide add button
         showAddButton[sender.tag] = 0
         
@@ -251,6 +284,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         MyEventStart.remove(at: sender.tag)
         MyEventEnd.remove(at: sender.tag)
         MyEventPrices.remove(at: sender.tag)
+        
+        //remove notification
+        let notifCenter = UNUserNotificationCenter.current()
+
+        notifCenter.removePendingNotificationRequests(withIdentifiers: ["EventNotif" + String(sender.tag)])
         
         
         //save to defaults
@@ -362,27 +400,24 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         ScrollView.addSubview(TodayCView)
         
-        //notifications
+         //notifications
         let notifCenter = UNUserNotificationCenter.current()
 
-        //permission
-        notifCenter.requestAuthorization(options: [.alert, .sound]) { (allowed, error) in
-            if (!allowed) {
-                print("Notifications not allowed")
-            }
-        }
-        
-        //content
-        let notifContent = UNMutableNotificationContent()
-        //notifContent.title = EVENT NAME
-        //notifContent.body = TIME
-        
-        //trigger
-        //---
 
-        
-        //request
-        //---
+        //check for permission
+        notifCenter.getNotificationSettings { (settings) in
+           if settings.authorizationStatus != .authorized {
+              
+               //ask for permission
+               notifCenter.requestAuthorization(options: [.alert, .sound]) { (allowed, error) in
+                   if (!allowed) {
+                       print("Notifications not allowed")
+                   }
+               }
+               
+           }
+        }
+    
 
         
         //ADD REQUEST ON ADDBUTTON FUNC AND REMOVE REQUEST ON REMOVEBUTTON FUNC
