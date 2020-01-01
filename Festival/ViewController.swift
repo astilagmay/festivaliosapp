@@ -304,7 +304,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         //remove notification
         let notifCenter = UNUserNotificationCenter.current()
 
-        notifCenter.removePendingNotificationRequests(withIdentifiers: ["EventNotif" + String(sender.tag)])
+        notifCenter.removePendingNotificationRequests(withIdentifiers: ["EventNotif" + String(MyTags[sender.tag])])
         
         
         //save to defaults
