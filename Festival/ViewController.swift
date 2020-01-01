@@ -59,6 +59,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var MyEventStart = [String]()
     var MyEventEnd = [String]()
     var MyEventPrices = [String]()
+    var MyTags = [Int]()
     @IBOutlet weak var NoUpcoming: UILabel!
     
     //Segue variables
@@ -183,6 +184,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     //add event button
     @IBAction func AddButton(_ sender: UIButton) {
+        // debug:
+        //print(sender.tag)
         
         //add to upcoming arrays
         MyEventImages.append(EventImages[sender.tag])
@@ -192,6 +195,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         MyEventStart.append(EventStart[sender.tag])
         MyEventEnd.append(EventEnd[sender.tag])
         MyEventPrices.append(EventPrices[sender.tag])
+        MyTags.append(sender.tag)
         
         
         //set notification
@@ -284,6 +288,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     //remove event
     @IBAction func RemoveButton(_ sender: UIButton) {
+        // debug:
+        //print(MyTags[sender.tag])
         
         //remove in upcoming arrays
         MyEventImages.remove(at: sender.tag)
@@ -293,6 +299,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         MyEventStart.remove(at: sender.tag)
         MyEventEnd.remove(at: sender.tag)
         MyEventPrices.remove(at: sender.tag)
+        
         
         //remove notification
         let notifCenter = UNUserNotificationCenter.current()
@@ -321,7 +328,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
         //show add button
-        showAddButton[sender.tag] = 1
+        showAddButton[MyTags[sender.tag]] = 1
+        MyTags.remove(at: sender.tag)
         
         //reload data
         self.UpcomingCView.reloadData()
