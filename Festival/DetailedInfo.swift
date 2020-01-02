@@ -16,6 +16,7 @@ class DetailedInfo: UIViewController {
     @IBOutlet weak var EventTime: UILabel!
     @IBOutlet weak var EventPrice: UILabel!
     @IBOutlet weak var EventImage: UIImageView!
+    @IBOutlet weak var ScrollView: UIScrollView!
     
     //Segue variables
     var passedName = String()
@@ -38,6 +39,7 @@ class DetailedInfo: UIViewController {
         EventImage.image = passedImage
 
         // Do any additional setup after loading the view.
+    //ScrollView.contentLayoutGuide.bottomAnchor.constraint(equalTo: EventDesc.bottomAnchor).isActive = true
     }
     
 
