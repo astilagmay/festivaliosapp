@@ -24,7 +24,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHb-TE-TO1">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHb-TE-TO1">
                                 <rect key="frame" x="0.0" y="429" width="375" height="1527"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LeK-fT-ab1">
@@ -34,7 +34,7 @@
                                                 <rect key="frame" x="12" y="0.0" width="351" height="1513"/>
                                                 <color key="backgroundColor" red="0.96070033311843872" green="0.96083813905715942" blue="0.96067017316818237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="1513" id="DKH-HV-J7l"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1513" id="DKH-HV-J7l"/>
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="saY-vu-f4Q">
                                                     <size key="itemSize" width="350" height="100"/>
@@ -193,11 +193,11 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.96070033311843872" green="0.96083813905715942" blue="0.96067017316818237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="LXk-CZ-PKB" firstAttribute="bottom" secondItem="xHI-KA-OeE" secondAttribute="bottom" id="3E8-a8-hTg"/>
+                                            <constraint firstAttribute="bottom" secondItem="xHI-KA-OeE" secondAttribute="bottom" id="3E8-a8-hTg"/>
                                             <constraint firstItem="xHI-KA-OeE" firstAttribute="centerX" secondItem="LeK-fT-ab1" secondAttribute="centerX" id="IB2-hU-Onb"/>
-                                            <constraint firstItem="xHI-KA-OeE" firstAttribute="top" secondItem="LXk-CZ-PKB" secondAttribute="top" id="JKg-Ve-vVx"/>
+                                            <constraint firstItem="xHI-KA-OeE" firstAttribute="top" secondItem="LeK-fT-ab1" secondAttribute="top" id="JKg-Ve-vVx"/>
                                             <constraint firstItem="xHI-KA-OeE" firstAttribute="leading" secondItem="LeK-fT-ab1" secondAttribute="leading" constant="12" id="bTX-Ad-eHe"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="6" identifier="id6" id="eYa-Kq-Gyi"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1513" identifier="id6" id="eYa-Kq-Gyi"/>
                                         </constraints>
                                         <viewLayoutGuide key="safeArea" id="LXk-CZ-PKB"/>
                                     </view>
