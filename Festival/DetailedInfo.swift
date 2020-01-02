@@ -38,8 +38,6 @@ class DetailedInfo: UIViewController {
         EventPrice.text = passedPrice
         EventImage.image = passedImage
 
-        // Do any additional setup after loading the view.
-    //ScrollView.contentLayoutGuide.bottomAnchor.constraint(equalTo: EventDesc.bottomAnchor).isActive = true
     }
     
 
