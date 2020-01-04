@@ -94,7 +94,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let localStart = defaults.stringArray(forKey: "LocalStart") ?? [String]()
         let localEnd = defaults.stringArray(forKey: "LocalEnd") ?? [String]()
         let localPrices = defaults.stringArray(forKey: "LocalPrices") ?? [String]()
-    
+        let localTags = defaults.array(forKey: "LocalTags") ?? [Int]()
+
         //assign to upcoming arrays
         MyEventNames = localNames
         MyEventDates = localDates
@@ -102,6 +103,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         MyEventStart = localStart
         MyEventEnd = localEnd
         MyEventPrices = localPrices
+        MyTags = localTags as! [Int]
+        
+        print(MyTags)
         
         //add default image
         for _ in MyEventNames {
@@ -262,6 +266,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         defaults.set(MyEventStart, forKey: "LocalStart")
         defaults.set(MyEventEnd, forKey: "LocalEnd")
         defaults.set(MyEventPrices, forKey: "LocalPrices")
+        defaults.set(MyTags, forKey: "LocalTags")
         
         //reload data
         self.UpcomingCView.reloadData()
@@ -300,7 +305,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         MyEventEnd.remove(at: sender.tag)
         MyEventPrices.remove(at: sender.tag)
         
-        
         //remove notification
         let notifCenter = UNUserNotificationCenter.current()
 
@@ -315,6 +319,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         defaults.set(MyEventStart, forKey: "LocalStart")
         defaults.set(MyEventEnd, forKey: "LocalEnd")
         defaults.set(MyEventPrices, forKey: "LocalPrices")
+
         
         
         //check if no upcoming
@@ -330,6 +335,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         //show add button
         showAddButton[MyTags[sender.tag]] = 1
         MyTags.remove(at: sender.tag)
+        defaults.set(MyTags, forKey: "LocalTags")
         
         //reload data
         self.UpcomingCView.reloadData()
