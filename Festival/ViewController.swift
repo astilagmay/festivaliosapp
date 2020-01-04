@@ -415,15 +415,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ScrollView.delaysContentTouches = true
-        ScrollView.canCancelContentTouches = true
-        ScrollView.isUserInteractionEnabled = true
-        ScrollView.isExclusiveTouch = true
+        //ScrollView.delaysContentTouches = true
+        //ScrollView.canCancelContentTouches = true
+        //ScrollView.isUserInteractionEnabled = true
+        //ScrollView.isExclusiveTouch = true
         
         getInfo()
         getLocalData()
         
-        ScrollView.addSubview(TodayCView)
+        //ScrollView.addSubview(TodayCView)
         
          //notifications
         let notifCenter = UNUserNotificationCenter.current()
