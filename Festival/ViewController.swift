@@ -122,7 +122,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             NoUpcoming.isHidden = true
         }
        
-        
+        for i in MyTags {
+            showAddButton[i] = 0
+        }
         
     }
     
@@ -448,6 +450,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         TodayCView.frame.size = CGSize(width: TodayCView.collectionViewLayout.collectionViewContentSize.width, height: TodayCView.collectionViewLayout.collectionViewContentSize.height)
         
         // Do any additional setup after loading the view.
+        
     }
     
     
