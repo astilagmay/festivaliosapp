@@ -335,7 +335,6 @@ events! </string>
                                                             <rect key="frame" x="290" y="14" width="48" height="10"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="48" id="09k-WF-jIJ"/>
-                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="48" id="6Qd-fD-1gV"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="8"/>
                                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -410,7 +409,7 @@ events! </string>
                                                     <constraint firstItem="9sh-2W-rAV" firstAttribute="top" secondItem="xpb-dt-OYP" secondAttribute="top" id="R6n-DE-6GK"/>
                                                     <constraint firstAttribute="trailingMargin" secondItem="riD-ep-Okt" secondAttribute="trailing" constant="60" id="RzZ-Rc-HAS"/>
                                                     <constraint firstItem="1BT-px-QWU" firstAttribute="centerX" secondItem="n0C-PX-r46" secondAttribute="centerX" id="VeF-Fo-O7i"/>
-                                                    <constraint firstItem="NzK-fF-2hk" firstAttribute="leading" secondItem="9sh-2W-rAV" secondAttribute="trailing" constant="13" id="WZm-5G-Dmd"/>
+                                                    <constraint firstAttribute="trailingMargin" secondItem="9sh-2W-rAV" secondAttribute="trailing" constant="145.5" id="WZm-5G-Dmd"/>
                                                     <constraint firstItem="riD-ep-Okt" firstAttribute="top" secondItem="xpb-dt-OYP" secondAttribute="topMargin" constant="17" id="XBv-gs-xMn"/>
                                                     <constraint firstAttribute="bottom" secondItem="GaW-bs-fpD" secondAttribute="bottom" constant="7" id="XvQ-51-BhI"/>
                                                     <constraint firstItem="GaW-bs-fpD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xpb-dt-OYP" secondAttribute="leading" constant="-31" id="Ycc-qq-lr6"/>
@@ -420,8 +419,9 @@ events! </string>
                                                     <constraint firstItem="TOM-bY-naa" firstAttribute="leading" secondItem="n0C-PX-r46" secondAttribute="trailing" constant="25" id="fZ6-S6-nIx"/>
                                                     <constraint firstItem="TdL-8j-BIF" firstAttribute="leading" secondItem="NzK-fF-2hk" secondAttribute="trailing" constant="8" id="ixw-Bc-fiH"/>
                                                     <constraint firstItem="c0a-iu-PgO" firstAttribute="top" secondItem="TdL-8j-BIF" secondAttribute="bottom" constant="0.5" id="kII-LP-Fyp"/>
+                                                    <constraint firstItem="NzK-fF-2hk" firstAttribute="leading" secondItem="9sh-2W-rAV" secondAttribute="trailing" constant="13" id="kfe-Eq-aW8"/>
                                                     <constraint firstItem="9sh-2W-rAV" firstAttribute="bottom" secondItem="1BT-px-QWU" secondAttribute="bottom" id="mYo-zV-ZLx"/>
-                                                    <constraint firstItem="c0a-iu-PgO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9sh-2W-rAV" secondAttribute="trailing" constant="96" id="q2t-xX-yC4"/>
+                                                    <constraint firstItem="c0a-iu-PgO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="riD-ep-Okt" secondAttribute="trailing" constant="40.5" id="q2t-xX-yC4"/>
                                                     <constraint firstAttribute="bottomMargin" secondItem="n0C-PX-r46" secondAttribute="bottom" constant="2" id="rN5-LB-7hL"/>
                                                     <constraint firstItem="TOM-bY-naa" firstAttribute="top" secondItem="NzK-fF-2hk" secondAttribute="bottom" constant="15" id="vvg-nF-cZQ"/>
                                                     <constraint firstItem="GaW-bs-fpD" firstAttribute="top" secondItem="c0a-iu-PgO" secondAttribute="bottom" constant="38" id="ykP-pS-mHC"/>
