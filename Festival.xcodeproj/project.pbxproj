@@ -19,7 +19,7 @@
 		0AA4B2342377E3D8007ADB92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA4B2322377E3D8007ADB92 /* LaunchScreen.storyboard */; };
 		0AA4B23F2377E3D8007ADB92 /* FestivalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4B23E2377E3D8007ADB92 /* FestivalTests.swift */; };
 		0AA4B24A2377E3D9007ADB92 /* FestivalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4B2492377E3D9007ADB92 /* FestivalUITests.swift */; };
-		0D52699F23BAE52F00E65EAB /* sub.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D52699E23BAE52F00E65EAB /* sub.png */; };
+		0D50050423C2B5C1004AD2DB /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D50050323C2B5C1004AD2DB /* iTunesArtwork@2x.png */; };
 		0D7C7AF123B03DE600F7CE0C /* sf-ui-display-light-58646b33e0551.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0D7C7AE923B03DE500F7CE0C /* sf-ui-display-light-58646b33e0551.otf */; };
 		0D7C7AF223B03DE600F7CE0C /* sf-ui-display-thin-58646e9b26e8b.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0D7C7AEA23B03DE500F7CE0C /* sf-ui-display-thin-58646e9b26e8b.otf */; };
 		0D7C7AF323B03DE600F7CE0C /* sf-ui-display-medium-58646be638f96.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0D7C7AEB23B03DE500F7CE0C /* sf-ui-display-medium-58646be638f96.otf */; };
@@ -65,7 +65,7 @@
 		0A9C7CD723A68276007FE279 /* SF UI Display Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF UI Display Medium.otf"; path = "../../../../Downloads/sf-ui-display-cufonfonts/SF UI Display Medium.otf"; sourceTree = "<group>"; };
 		0A9C7CD823A68276007FE279 /* SF UI Display Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF UI Display Thin.otf"; path = "../../../../Downloads/sf-ui-display-cufonfonts/SF UI Display Thin.otf"; sourceTree = "<group>"; };
 		0A9C7CD923A68276007FE279 /* SF UI Display Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF UI Display Semibold.otf"; path = "../../../../Downloads/sf-ui-display-cufonfonts/SF UI Display Semibold.otf"; sourceTree = "<group>"; };
-		0AA4B2262377E3D4007ADB92 /* Festival.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Festival.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AA4B2262377E3D4007ADB92 /* PARKES 2870.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PARKES 2870.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AA4B2292377E3D4007ADB92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AA4B22B2377E3D4007ADB92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0AA4B22E2377E3D4007ADB92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 		0AA4B2492377E3D9007ADB92 /* FestivalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalUITests.swift; sourceTree = "<group>"; };
 		0AA4B24B2377E3D9007ADB92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D324C1123B84B9400882BE8 /* Festival.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Festival.entitlements; sourceTree = "<group>"; };
-		0D52699E23BAE52F00E65EAB /* sub.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sub.png; sourceTree = SOURCE_ROOT; };
+		0D50050323C2B5C1004AD2DB /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		0D7C7AE823B03DC400F7CE0C /* ZingRustDemo-Base.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ZingRustDemo-Base.otf"; path = "Festival/Fonts/ZingRustDemo-Base.otf"; sourceTree = "<group>"; };
 		0D7C7AE923B03DE500F7CE0C /* sf-ui-display-light-58646b33e0551.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "sf-ui-display-light-58646b33e0551.otf"; path = "Festival/Fonts/sf-ui-display-light-58646b33e0551.otf"; sourceTree = "<group>"; };
 		0D7C7AEA23B03DE500F7CE0C /* sf-ui-display-thin-58646e9b26e8b.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "sf-ui-display-thin-58646e9b26e8b.otf"; path = "Festival/Fonts/sf-ui-display-thin-58646e9b26e8b.otf"; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 		0AA4B2272377E3D4007ADB92 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0AA4B2262377E3D4007ADB92 /* Festival.app */,
+				0AA4B2262377E3D4007ADB92 /* PARKES 2870.app */,
 				0AA4B23A2377E3D8007ADB92 /* FestivalTests.xctest */,
 				0AA4B2452377E3D9007ADB92 /* FestivalUITests.xctest */,
 			);
@@ -180,7 +180,7 @@
 				0AA4B2302377E3D8007ADB92 /* Assets.xcassets */,
 				0AA4B2322377E3D8007ADB92 /* LaunchScreen.storyboard */,
 				0AA4B2352377E3D8007ADB92 /* Info.plist */,
-				0D52699E23BAE52F00E65EAB /* sub.png */,
+				0D50050323C2B5C1004AD2DB /* iTunesArtwork@2x.png */,
 				CE67151223AAC3F0005E17F3 /* HomeModel.swift */,
 				CE67151423AAC441005E17F3 /* EventModel.swift */,
 				CE67151623AAC743005E17F3 /* LocationModel.swift */,
@@ -224,7 +224,7 @@
 			);
 			name = Festival;
 			productName = Festival;
-			productReference = 0AA4B2262377E3D4007ADB92 /* Festival.app */;
+			productReference = 0AA4B2262377E3D4007ADB92 /* PARKES 2870.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0AA4B2392377E3D8007ADB92 /* FestivalTests */ = {
@@ -321,7 +321,7 @@
 				0D7C7AF823B03DE600F7CE0C /* sf-ui-display-ultralight-58646b19bf205.otf in Resources */,
 				0A9C7CC523A681BE007FE279 /* ZingRustDemo-Base.otf in Resources */,
 				0AA4B2342377E3D8007ADB92 /* LaunchScreen.storyboard in Resources */,
-				0D52699F23BAE52F00E65EAB /* sub.png in Resources */,
+				0D50050423C2B5C1004AD2DB /* iTunesArtwork@2x.png in Resources */,
 				0AA4B2312377E3D8007ADB92 /* Assets.xcassets in Resources */,
 				0AA4B22F2377E3D4007ADB92 /* Main.storyboard in Resources */,
 			);
@@ -531,42 +531,42 @@
 		0AA4B24F2377E3D9007ADB92 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Festival/Festival.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = AUZVGA3AU5;
 				INFOPLIST_FILE = Festival/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.UPCircuit.Festival;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "PARKES 2870";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		0AA4B2502377E3D9007ADB92 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Festival/Festival.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = AUZVGA3AU5;
 				INFOPLIST_FILE = Festival/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.UPCircuit.Festival;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "PARKES 2870";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
