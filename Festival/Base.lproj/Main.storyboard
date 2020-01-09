@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="sf-ui-display-bold-58646a511e3d9.otf">
+        <array key="SF UI Display Bold.otf">
             <string>SFUIDisplay-Bold</string>
         </array>
         <array key="sf-ui-display-medium-58646be638f96.otf">
@@ -84,8 +84,8 @@ events! </string>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PvG-Jb-FHd">
                                                     <rect key="frame" x="7" y="104" width="50" height="15"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRICE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tby-eX-9SE">
-                                                            <rect key="frame" x="11" y="1" width="29" height="12"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRICE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tby-eX-9SE">
+                                                            <rect key="frame" x="5" y="1" width="40" height="12"/>
                                                             <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="10"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -94,9 +94,9 @@ events! </string>
                                                     <color key="backgroundColor" red="0.50412523750000005" green="0.1187692657" blue="0.092563666399999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="Tby-eX-9SE" firstAttribute="top" secondItem="PvG-Jb-FHd" secondAttribute="top" constant="1" id="AXw-Ag-VWs"/>
-                                                        <constraint firstItem="Tby-eX-9SE" firstAttribute="leading" secondItem="PvG-Jb-FHd" secondAttribute="leading" constant="11" id="BPK-9S-lc8"/>
+                                                        <constraint firstItem="Tby-eX-9SE" firstAttribute="leading" secondItem="PvG-Jb-FHd" secondAttribute="leading" constant="5" id="BPK-9S-lc8"/>
                                                         <constraint firstAttribute="width" constant="50" id="Che-D9-CUG"/>
-                                                        <constraint firstAttribute="trailing" secondItem="Tby-eX-9SE" secondAttribute="trailing" constant="10" id="MiS-ke-6tq"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Tby-eX-9SE" secondAttribute="trailing" constant="5" id="MiS-ke-6tq"/>
                                                         <constraint firstAttribute="height" constant="15" id="dGB-nS-KCF"/>
                                                         <constraint firstAttribute="bottom" secondItem="Tby-eX-9SE" secondAttribute="bottom" constant="2" id="oZu-sd-dFo"/>
                                                     </constraints>
@@ -186,8 +186,8 @@ events! </string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1x-it-VPq">
-                                        <rect key="frame" x="318" y="76" width="26.5" height="14"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1x-it-VPq">
+                                        <rect key="frame" x="185" y="76" width="160" height="14"/>
                                         <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -258,7 +258,7 @@ events! </string>
                                     <constraint firstAttribute="trailing" secondItem="xPB-JU-J6j" secondAttribute="trailing" id="s7r-lK-fwe"/>
                                     <constraint firstAttribute="trailing" secondItem="V1x-it-VPq" secondAttribute="trailing" constant="8" id="tHl-4s-RLL"/>
                                     <constraint firstAttribute="bottom" secondItem="xPB-JU-J6j" secondAttribute="bottom" id="ucH-Vy-fiZ"/>
-                                    <constraint firstItem="V1x-it-VPq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="D7J-4h-YmM" secondAttribute="trailing" constant="228" id="v5b-dN-8TI"/>
+                                    <constraint firstItem="V1x-it-VPq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="D7J-4h-YmM" secondAttribute="trailing" constant="98.5" id="v5b-dN-8TI"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HAPPENING RIGHT NOW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tto-mh-Jky">
@@ -754,7 +754,7 @@ events! </string>
     </scenes>
     <resources>
         <image name="AddEvent" width="15" height="15"/>
-        <image name="CurrentEvent" width="351" height="234"/>
+        <image name="CurrentEvent" width="369" height="115"/>
         <image name="Home" width="18" height="15.5"/>
         <image name="RemoveEvent" width="15" height="15"/>
         <image name="TodayEvent" width="512" height="512"/>

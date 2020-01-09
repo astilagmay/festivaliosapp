@@ -227,7 +227,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         
         //timeInterval is the difference between current date and event date(IN SECONDS)
-        let timeInterval = (evDate?.timeIntervalSinceNow)!
+        let timeInterval = (evDate?.timeIntervalSinceNow)! - 1800
         
         let date = Date(timeIntervalSinceNow: timeInterval)
         let triggerDate = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
