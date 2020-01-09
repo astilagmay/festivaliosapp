@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="SF UI Display Bold.otf">
+        <array key="sf-ui-display-bold-58646a511e3d9.otf">
             <string>SFUIDisplay-Bold</string>
         </array>
         <array key="sf-ui-display-medium-58646be638f96.otf">
@@ -25,7 +25,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Jew-p7-ZWm">
-                                <rect key="frame" x="11.5" y="180" width="352.5" height="195"/>
+                                <rect key="frame" x="11" y="180" width="353" height="195"/>
                                 <color key="backgroundColor" red="0.96070033311843872" green="0.96083813905715942" blue="0.96067017316818237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="195" id="hc4-A7-6i2"/>
@@ -37,7 +37,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <label key="backgroundView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mVK-eE-nHP">
-                                    <rect key="frame" x="0.0" y="0.0" width="352.5" height="195"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="195"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <string key="text">No upcoming events! 
 
@@ -165,7 +165,7 @@ events! </string>
                                 </connections>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4XH-7d-WGk">
-                                <rect key="frame" x="11.5" y="40" width="352.5" height="100"/>
+                                <rect key="frame" x="11.5" y="35" width="352.5" height="100"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurrentEvent" translatesAutoresizingMaskIntoConstraints="NO" id="xPB-JU-J6j">
                                         <rect key="frame" x="0.0" y="0.0" width="352.5" height="100"/>
@@ -222,7 +222,7 @@ events! </string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No events happening right now" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRP-Oe-g0H">
-                                        <rect key="frame" x="80.5" y="44" width="188" height="16"/>
+                                        <rect key="frame" x="81" y="44" width="188" height="16"/>
                                         <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -262,13 +262,13 @@ events! </string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HAPPENING RIGHT NOW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tto-mh-Jky">
-                                <rect key="frame" x="30" y="20" width="146" height="16"/>
+                                <rect key="frame" x="30" y="20" width="146" height="11"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="13"/>
                                 <color key="textColor" red="0.48230850696563721" green="0.48238134384155273" blue="0.4822925329208374" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY UPCOMING EVENTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aT-2Q-K4i">
-                                <rect key="frame" x="30" y="160" width="141.5" height="16"/>
+                                <rect key="frame" x="30" y="155" width="141.5" height="21"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="13"/>
                                 <color key="textColor" red="0.482308507" green="0.48238134379999997" blue="0.48229253290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -370,13 +370,16 @@ events! </string>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1BT-px-QWU">
-                                                            <rect key="frame" x="0.0" y="0.0" width="319" height="100"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="59.5" height="100"/>
                                                             <connections>
                                                                 <action selector="SegueButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tx4-UC-7wO"/>
                                                             </connections>
                                                         </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Event Description" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOM-bY-naa">
-                                                            <rect key="frame" x="120" y="41" width="160" height="51"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Description" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOM-bY-naa">
+                                                            <rect key="frame" x="119.5" y="41" width="160.5" height="51"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="51" id="eEm-24-Avk"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="8"/>
                                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -427,11 +430,6 @@ events! </string>
                                                     <constraint firstItem="TOM-bY-naa" firstAttribute="top" secondItem="NzK-fF-2hk" secondAttribute="bottom" constant="15" id="vvg-nF-cZQ"/>
                                                     <constraint firstItem="GaW-bs-fpD" firstAttribute="top" secondItem="c0a-iu-PgO" secondAttribute="bottom" constant="38" id="ykP-pS-mHC"/>
                                                 </constraints>
-                                                <variation key="default">
-                                                    <mask key="subviews">
-                                                        <exclude reference="1BT-px-QWU"/>
-                                                    </mask>
-                                                </variation>
                                                 <connections>
                                                     <outlet property="AddButton" destination="GaW-bs-fpD" id="Gbt-YT-S1L"/>
                                                     <outlet property="EventDate" destination="TdL-8j-BIF" id="4zw-77-BVM"/>
@@ -467,20 +465,23 @@ events! </string>
                             <constraint firstItem="LeK-fT-ab1" firstAttribute="top" secondItem="IFU-A6-pil" secondAttribute="bottom" constant="27" id="2Nq-fO-hBn"/>
                             <constraint firstItem="Tto-mh-Jky" firstAttribute="leading" secondItem="0aT-2Q-K4i" secondAttribute="leading" id="4N9-Vj-lqq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0aT-2Q-K4i" secondAttribute="trailing" constant="203.5" id="5mw-2c-rn9"/>
+                            <constraint firstItem="Jew-p7-ZWm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="FeU-nk-y2h"/>
                             <constraint firstItem="LeK-fT-ab1" firstAttribute="centerX" secondItem="Jew-p7-ZWm" secondAttribute="centerX" id="K18-jb-aL5"/>
+                            <constraint firstItem="4XH-7d-WGk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="KKh-NU-GjE"/>
                             <constraint firstItem="Tto-mh-Jky" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="LMT-ze-rrb"/>
                             <constraint firstItem="Jew-p7-ZWm" firstAttribute="top" secondItem="0aT-2Q-K4i" secondAttribute="bottom" constant="4" id="LOm-1V-2Lb"/>
                             <constraint firstItem="IFU-A6-pil" firstAttribute="leading" secondItem="0aT-2Q-K4i" secondAttribute="leading" id="N8M-RX-AeN"/>
                             <constraint firstItem="LeK-fT-ab1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cM9-P2-DRo"/>
-                            <constraint firstItem="4XH-7d-WGk" firstAttribute="trailing" secondItem="Jew-p7-ZWm" secondAttribute="trailing" id="d5i-Cz-Znq"/>
+                            <constraint firstItem="4XH-7d-WGk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-11" id="d5i-Cz-Znq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tto-mh-Jky" secondAttribute="trailing" constant="199" id="eyI-if-v6H"/>
-                            <constraint firstItem="4XH-7d-WGk" firstAttribute="leading" secondItem="Jew-p7-ZWm" secondAttribute="leading" id="gaF-cI-QiM"/>
+                            <constraint firstItem="4XH-7d-WGk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11.5" id="gaF-cI-QiM"/>
                             <constraint firstItem="0aT-2Q-K4i" firstAttribute="top" secondItem="4XH-7d-WGk" secondAttribute="bottom" constant="20" id="khy-Ay-rIL"/>
                             <constraint firstItem="LeK-fT-ab1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="knK-7r-oYu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IFU-A6-pil" secondAttribute="trailing" constant="152.5" id="l8R-vW-WIp"/>
                             <constraint firstItem="LeK-fT-ab1" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="noV-lh-HRi"/>
                             <constraint firstItem="Tto-mh-Jky" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="rd8-cm-Dqk"/>
                             <constraint firstItem="4XH-7d-WGk" firstAttribute="top" secondItem="Tto-mh-Jky" secondAttribute="bottom" constant="4" id="taW-Gt-uzh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jew-p7-ZWm" secondAttribute="trailing" constant="11" id="yIE-JN-WLc"/>
                             <constraint firstItem="IFU-A6-pil" firstAttribute="top" secondItem="Jew-p7-ZWm" secondAttribute="bottom" constant="25" id="z04-eX-iuk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
